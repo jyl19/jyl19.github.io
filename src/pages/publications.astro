@@ -1,45 +1,62 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { publicationCategories, publications } from "../data/publications";
+import { publications } from "../data/publications";
 import { site } from "../data/site";
+
+const peerReviewed = publications
+  .filter((item) => item.section === "peerReviewed")
+  .sort((a, b) => b.year - a.year);
+
+const otherPublications = publications
+  .filter((item) => item.section === "other")
+  .sort((a, b) => b.year - a.year);
 ---
 
-<BaseLayout title={`Publications | ${site.name}`} description="Selected and grouped publications.">
+<BaseLayout title={`Publications | ${site.name}`} description="Full publications list with short abstracts and links.">
   <section class="panel">
     <div class="eyebrow">Publications</div>
     <h1>Publications</h1>
-    <p class="lede">
-      Selected publications grouped by substantive and methodological theme rather than by temporary status labels.
+    <p class="lede section-intro">
+      A complete list of publications drawn from my current CV, with short summaries to make the page more useful for
+      readers who want a quick sense of each project.
     </p>
-    <p>
-      This structure reflects how the work fits together intellectually and makes the page easier to keep current over time.
+    <p class="section-intro">
+      For journal articles, links point to DOI or publisher pages when available.
     </p>
   </section>
 
-  {publicationCategories.map(([key, label]) => {
-    const items = publications
-      .filter((item) => item.category === key)
-      .sort((a, b) => b.year - a.year);
+  <section class="section-grid">
+    <div class="panel span-12">
+      <h2>Peer-Reviewed Publications</h2>
+      <div class="list">
+        {peerReviewed.map((item) => (
+          <article class="pub">
+            <div class="pub-title"><strong>{item.title}</strong></div>
+            <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
+            {item.abstract && <p>{item.abstract}</p>}
+            {item.href && (
+              <div class="pub-meta">
+                <a class="pub-link" href={item.href}>Read article</a>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 
-    return (
-      <section class="section-grid">
-        <div class="panel span-12">
-          <h2>{label}</h2>
-          <div class="list">
-            {items.map((item) => (
-              <article class="pub">
-                <div class="pub-title"><strong>{item.title}</strong></div>
-                <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
-                {item.href && (
-                  <div class="pub-meta">
-                    <a class="pub-link" href={item.href}>Read article</a>
-                  </div>
-                )}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  })}
+  <section class="section-grid">
+    <div class="panel span-12">
+      <h2>Other Publications</h2>
+      <div class="list">
+        {otherPublications.map((item) => (
+          <article class="pub">
+            <div class="pub-title"><strong>{item.title}</strong></div>
+            <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
+            {item.abstract && <p>{item.abstract}</p>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 </BaseLayout>
