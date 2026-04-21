@@ -38,7 +38,7 @@ export const publications: Publication[] = [
     category: "institutions",
     featured: true,
     abstract:
-      "This article uses natural language processing to study how Congress delegates authority in statutory text. It focuses on the language of legislative delegation itself, showing how text-based features can be used to identify and compare when bills hand discretion to other actors."
+      "This article builds an active-learning text classifier to identify delegating language across a much larger set of congressional bills than prior hand-coded studies could cover. The resulting measure tracks existing delegation benchmarks well and is then used to show that delegation varies with sponsor ideology, party, and institutional position, changes over the course of the legislative process, and reflects differences in the ideology and independence of the agencies receiving authority."
   },
   {
     title: "Scaling Dialogue for Democracy: Can Automated Deliberation Create More Deliberative Voters?",
@@ -170,7 +170,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "institutions",
     abstract:
-      "This article studies how think tanks influence Congress despite being formally barred from lobbying. Using data on floor-speech citations and committee testimony, it argues that strategic ideological positioning shapes which think tanks legislators cite publicly and which they invite to testify."
+      "This article studies how think tanks influence Congress even though they are formally barred from lobbying. Using data on congressional floor-speech citations and committee testimony, it shows that ideological positioning shapes different forms of access: more ideologically extreme think tanks are cited more often in speeches, while more moderate think tanks are called to testify more often in committees. The paper argues that think tanks strategically position themselves to supply expertise that legislators find politically useful."
   },
   {
     title: "Does the Gift Keep on Giving? House Leadership PAC Donations Before and After Majority Status",
@@ -182,7 +182,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "institutions",
     abstract:
-      "This paper examines how party leaders use leadership PAC donations when they are in the majority versus the minority. It finds that both sides balance electoral goals and ideological cohesion, but majority leaders place relatively more weight on cohesion while minority leaders emphasize seat gains."
+      "This paper examines how House party leaders use leadership PAC donations to balance electoral strategy against ideological cohesion. It finds that leaders in both parties reward candidates who help with winning seats and maintaining party unity, but that majority leaders place relatively more emphasis on ideological homogeneity while minority leaders focus more heavily on seat gains and competitive races. In that sense, majority status changes the strategic logic of intraparty giving rather than eliminating the trade-off."
   },
   {
     title: "The Political Science of James Q. Wilson",
