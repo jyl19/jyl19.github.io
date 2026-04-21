@@ -101,7 +101,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "evaluation",
     abstract:
-      "This study evaluates whether a physician's past paid malpractice claims predict future claims across the full U.S. physician population. It finds that even one prior paid claim is associated with meaningfully higher future risk, suggesting that malpractice events are not well described as random bad luck alone."
+      "Using national data on all licensed U.S. physicians, this study tests whether prior paid malpractice claims predict future paid claims and whether that relationship fades with time or public disclosure. It finds that even a single prior paid claim is associated with a much higher risk of future claims, that the risk rises steadily with additional prior claims, and that disclosure rules do not explain the relationship. The paper argues that paid malpractice claims are not well described as random bad luck and that early noncoercive intervention could reduce future harm."
   },
   {
     title: "Inducing Polarization? The Effect of Congressional Procedure and Partisan Lawmaking on Ideal Point Estimation",
@@ -159,7 +159,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "evaluation",
     abstract:
-      "This paper studies whether repeated paid malpractice claims are plausibly attributable to chance. Comparing observed claim histories to a simulation-based null model, it shows that physicians with multiple recent paid claims are very unlikely to be merely unlucky, especially after accounting for specialty and state risk."
+      "This paper compares observed physician claim histories to a simulation-based null model in which malpractice claims are random events conditional on specialty and state risk. It shows that prior paid claims strongly predict future paid claims and that, even in high-risk specialties and states, physicians with three or more paid claims in five years are very unlikely to be explained by bad luck alone. The paper frames this as a way for hospitals and medical boards to identify outlier physicians for graduated intervention."
   },
   {
     title: "Getting the Message Across: Evaluating Think Tank Influence in Congress",
