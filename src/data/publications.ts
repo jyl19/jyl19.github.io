@@ -89,7 +89,7 @@ export const publications: Publication[] = [
     category: "survey",
     featured: true,
     abstract:
-      "This paper evaluates whether big-data classifiers can improve survey sampling for hard-to-reach or low-incidence populations. Across multiple survey applications, it finds that predictive models built from public and private auxiliary data modestly outperform traditional geographic clustering and compare favorably to vendor flags."
+      "This paper evaluates whether big-data classifiers can improve sample targeting for hard-to-reach and low-incidence survey populations. Using 15 classifiers trained on a large probability-based panel and tested across three survey datasets, it finds that the models generally outperform geographic clustering and often improve on vendor flags, usually by trading some coverage for noticeably higher incidence. The paper also shows that these gains vary across targets, making classifier-based sampling most useful when researchers care about efficiently finding specific subpopulations."
   },
   {
     title: "How Random Are Paid Medical Malpractice Claims?",
@@ -137,7 +137,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "institutions",
     abstract:
-      "This paper revisits the use of item-response models for measuring judicial ideology. It argues that common ideal-point applications ignore crucial item-parameter information, proposes a post-estimation correction, and shows that revised scores can change substantive conclusions about judicial behavior."
+      "This paper revisits Martin-Quinn-style judicial ideal points by focusing on the item parameters that most applications ignore. It shows that a meaningful set of Supreme Court cases have discrimination parameters inconsistent with the assumptions of a unidimensional IRT model, and that trimming or re-estimating around those cases yields more moderate justice scores and even changes the identity of the Court median in several terms. The broader argument is that judicial ideal-point estimates are more fragile than users often assume, especially when researchers treat them as precise cardinal measures."
   },
   {
     title: "Using Machine Learning and Disambiguated Author Identifiers to Improve Record Linkage for Funding Program Evaluation",
