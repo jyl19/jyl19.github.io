@@ -8,8 +8,19 @@ const featured = publications.filter((item) => item.featured).slice(0, 5);
 
 <BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
   <section class="hero">
-    <div class="eyebrow">{site.title}</div>
-    <h1>{site.name}</h1>
+    <div class="hero-heading">
+      <div>
+        <div class="eyebrow">{site.title}</div>
+        <h1>{site.name}</h1>
+      </div>
+      <img
+        class="hero-badge"
+        src="/images/joshua-lerner-headshot-square.jpg"
+        alt="Joshua Y. Lerner headshot"
+        width="5308"
+        height="5308"
+      />
+    </div>
     <p class="lede">{site.hero}</p>
     <p>{site.intro}</p>
     <div class="cta-row">

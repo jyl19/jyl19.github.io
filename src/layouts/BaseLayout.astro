@@ -107,6 +107,23 @@ const { title, description = "Joshua Y. Lerner academic and professional website
         padding: 3rem;
       }
 
+      .hero-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .hero-badge {
+        display: block;
+        width: clamp(84px, 12vw, 128px);
+        height: auto;
+        flex-shrink: 0;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        box-shadow: 0 16px 36px rgba(31, 42, 44, 0.14);
+      }
+
       .eyebrow {
         color: var(--accent);
         text-transform: uppercase;
@@ -269,6 +286,15 @@ const { title, description = "Joshua Y. Lerner academic and professional website
 
         .hero {
           padding: 2rem;
+        }
+
+        .hero-heading {
+          gap: 1rem;
+        }
+
+        .hero-badge {
+          width: 88px;
+          border-radius: 20px;
         }
       }
     </style>
