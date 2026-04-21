@@ -8,30 +8,17 @@ const featured = publications.filter((item) => item.featured).slice(0, 5);
 
 <BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
   <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow">{site.title}</div>
-        <h1>{site.name}</h1>
-        <p class="lede">{site.hero}</p>
-        <p>{site.intro}</p>
-        <div class="cta-row">
-          <a class="button primary" href="/publications">View Publications</a>
-          <a class="button" href="/cv">Download CV</a>
-          <a class="button" href="https://www.norc.org/about/experts/joshua-lerner.html">NORC Profile</a>
-        </div>
-        <div class="section tag-row">
-          {site.themes.map((theme) => <span class="tag">{theme.title}</span>)}
-        </div>
-      </div>
-
-      <div class="hero-portrait">
-        <img
-          src="/images/joshua-lerner-headshot.jpg"
-          alt="Joshua Y. Lerner headshot"
-          width="3991"
-          height="5322"
-        />
-      </div>
+    <div class="eyebrow">{site.title}</div>
+    <h1>{site.name}</h1>
+    <p class="lede">{site.hero}</p>
+    <p>{site.intro}</p>
+    <div class="cta-row">
+      <a class="button primary" href="/publications">View Publications</a>
+      <a class="button" href="/cv">Download CV</a>
+      <a class="button" href="https://www.norc.org/about/experts/joshua-lerner.html">NORC Profile</a>
+    </div>
+    <div class="section tag-row">
+      {site.themes.map((theme) => <span class="tag">{theme.title}</span>)}
     </div>
   </section>
 

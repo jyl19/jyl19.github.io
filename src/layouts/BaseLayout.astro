@@ -107,31 +107,6 @@ const { title, description = "Joshua Y. Lerner academic and professional website
         padding: 3rem;
       }
 
-      .hero-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
-        gap: 2rem;
-        align-items: center;
-      }
-
-      .hero-copy {
-        min-width: 0;
-      }
-
-      .hero-portrait {
-        justify-self: end;
-        width: min(100%, 360px);
-      }
-
-      .hero-portrait img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border-radius: 28px;
-        border: 1px solid var(--line);
-        box-shadow: 0 28px 70px rgba(31, 42, 44, 0.16);
-      }
-
       .eyebrow {
         color: var(--accent);
         text-transform: uppercase;
@@ -294,15 +269,6 @@ const { title, description = "Joshua Y. Lerner academic and professional website
 
         .hero {
           padding: 2rem;
-        }
-
-        .hero-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-portrait {
-          justify-self: start;
-          width: min(100%, 300px);
         }
       }
     </style>
