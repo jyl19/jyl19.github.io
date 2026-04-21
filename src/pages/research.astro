@@ -1,31 +1,87 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site";
+import { publicationCategories, publications } from "../data/publications";
+
+const researchSections = publicationCategories.map(([key, label]) => ({
+  key,
+  label,
+  theme: site.themes.find((theme) => theme.title === label),
+  items: publications.filter((item) => item.category === key).slice(0, 3)
+}));
 ---
 
 <BaseLayout title={`Research | ${site.name}`} description="Research areas and thematic overview.">
   <section class="panel span-12">
     <div class="eyebrow">Research</div>
     <h1>Research</h1>
-    <p class="lede">
-      My work spans survey research, computational social science, causal inference, and political institutions.
+    <p class="lede section-intro">
+      I work across survey methodology, computational social science, causal inference, and political institutions,
+      with an emphasis on measurement, inference, and applied public-facing research problems.
     </p>
-    <p>
-      Across these areas, I am interested in how modern statistical and computational tools can improve measurement,
-      strengthen inference, and help us study complex institutional and behavioral processes.
+    <p class="section-intro">
+      This page is organized around the main strands of my research rather than publication status. Each section gives
+      a short overview of the agenda along with a few representative papers.
     </p>
-    <p>
-      The site is organized around durable research themes rather than temporary pipeline labels so that published work,
-      ongoing agendas, and methods contributions can sit in the same public-facing structure.
-    </p>
+    <div class="anchor-row">
+      {researchSections.map((section) => (
+        <a class="anchor-link" href={`#${section.key}`}>{section.label}</a>
+      ))}
+    </div>
   </section>
 
   <section class="section-grid">
-    {site.themes.map((theme) => (
-      <article class="panel span-6">
-        <h2>{theme.title}</h2>
-        <p>{theme.body}</p>
+    {researchSections.map((section) => (
+      <article class="panel span-6 theme-card" id={section.key}>
+        <div>
+          <div class="eyebrow">Area</div>
+          <h2>{section.label}</h2>
+          <p>{section.theme?.body}</p>
+        </div>
+        <div>
+          <h3>Representative Work</h3>
+          <div class="compact-list">
+            {section.items.map((item) => (
+              <article class="pub">
+                <div class="pub-title"><strong>{item.title}</strong></div>
+                <p>{item.venue}, {item.year}.</p>
+                {item.href && <a class="pub-link" href={item.href}>Read article</a>}
+              </article>
+            ))}
+          </div>
+        </div>
       </article>
     ))}
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-8">
+      <div class="eyebrow">Approach</div>
+      <h2>How The Pieces Fit Together</h2>
+      <p>
+        A lot of my work sits at the overlap of substantive questions and methodological development. Survey projects
+        often draw on NLP or generative AI tools; evaluation work leans on design-based and econometric methods;
+        institutional work uses text, procedure, and measurement to study political behavior.
+      </p>
+      <p>
+        The unifying thread is building better ways to measure complex phenomena and make stronger empirical claims in
+        settings that are messy, high-dimensional, or institutionally constrained.
+      </p>
+    </div>
+    <div class="panel span-4">
+      <div class="eyebrow">Next Step</div>
+      <h2>See More</h2>
+      <div class="compact-list">
+        <div class="compact-item">
+          <p><a href="/publications">Browse the full publications list</a></p>
+        </div>
+        <div class="compact-item">
+          <p><a href="/cv">Download the current CV</a></p>
+        </div>
+        <div class="compact-item">
+          <p><a href="/contact">Get in touch</a></p>
+        </div>
+      </div>
+    </div>
   </section>
 </BaseLayout>
