@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title={`Contact | ${site.name}`} description="Professional contact information and external links.">
+  <section class="panel">
+    <div class="eyebrow">Contact</div>
+    <h1>Contact</h1>
+    <p class="lede">
+      The best way to reach me is by email.
+    </p>
+    <p>
+      For research collaborations, talks, short courses, or methods-related questions, email is the most reliable point of contact.
+    </p>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-6">
+      <h2>Professional Contact</h2>
+      <p><strong>{site.name}</strong></p>
+      <p>{site.title}</p>
+      <p>NORC at the University of Chicago</p>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+    </div>
+
+    <div class="panel span-6">
+      <h2>Links</h2>
+      <div class="list">
+        <a href="https://www.norc.org/about/experts/joshua-lerner.html">NORC Profile</a>
+        <a href="https://scholar.google.com/citations?user=0pVC2RcAAAAJ&hl=en">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/josh-lerner-26272922/">LinkedIn</a>
+        <a href="/cv">Download CV</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

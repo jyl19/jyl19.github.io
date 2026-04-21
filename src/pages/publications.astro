@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { publicationCategories, publications } from "../data/publications";
+import { site } from "../data/site";
+---
+
+<BaseLayout title={`Publications | ${site.name}`} description="Selected and grouped publications.">
+  <section class="panel">
+    <div class="eyebrow">Publications</div>
+    <h1>Publications</h1>
+    <p class="lede">
+      Selected publications grouped by substantive and methodological theme rather than by temporary status labels.
+    </p>
+    <p>
+      This structure reflects how the work fits together intellectually and makes the page easier to keep current over time.
+    </p>
+  </section>
+
+  {publicationCategories.map(([key, label]) => {
+    const items = publications
+      .filter((item) => item.category === key)
+      .sort((a, b) => b.year - a.year);
+
+    return (
+      <section class="section-grid">
+        <div class="panel span-12">
+          <h2>{label}</h2>
+          <div class="list">
+            {items.map((item) => (
+              <article class="pub">
+                <div class="pub-title"><strong>{item.title}</strong></div>
+                <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
+                {item.href && (
+                  <div class="pub-meta">
+                    <a class="pub-link" href={item.href}>Read article</a>
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  })}
+</BaseLayout>

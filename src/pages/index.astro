@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { publications } from "../data/publications";
+import { site } from "../data/site";
+
+const featured = publications.filter((item) => item.featured).slice(0, 5);
+---
+
+<BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">{site.title}</div>
+        <h1>{site.name}</h1>
+        <p class="lede">{site.hero}</p>
+        <p>{site.intro}</p>
+        <div class="cta-row">
+          <a class="button primary" href="/publications">View Publications</a>
+          <a class="button" href="/cv">Download CV</a>
+          <a class="button" href="https://www.norc.org/about/experts/joshua-lerner.html">NORC Profile</a>
+        </div>
+        <div class="section tag-row">
+          {site.themes.map((theme) => <span class="tag">{theme.title}</span>)}
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <img
+          src="/images/joshua-lerner-headshot.jpg"
+          alt="Joshua Y. Lerner headshot"
+          width="3991"
+          height="5322"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-8">
+      <h2>Overview</h2>
+      <p class="lede">{site.summary}</p>
+      {site.bio.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <div class="panel span-4">
+      <h2>Quick Links</h2>
+      <div class="list">
+        {site.links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-8">
+      <h2>Research Areas</h2>
+      <div class="section-grid">
+        {site.themes.map((theme) => (
+          <article class="span-6">
+            <h3>{theme.title}</h3>
+            <p>{theme.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="panel span-4">
+      <h2>Current Focus</h2>
+      <div class="compact-list">
+        {site.currentFocus.map((item) => (
+          <div class="compact-item">
+            <p>{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-8">
+      <h2>Selected Publications</h2>
+      <div class="list">
+        {featured.map((item) => (
+          <article class="pub">
+            <div class="pub-title"><strong>{item.title}</strong></div>
+            <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
+            {item.href && (
+              <div class="pub-meta">
+                <a class="pub-link" href={item.href}>Read article</a>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="panel span-4">
+      <h2>Recent Talks</h2>
+      <div class="compact-list">
+        {site.talks.map((talk) => (
+          <div class="compact-item">
+            <div class="pub-title"><strong>{talk.title}</strong></div>
+            <p>{talk.venue}, {talk.year}.</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

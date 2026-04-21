@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title={`Research | ${site.name}`} description="Research areas and thematic overview.">
+  <section class="panel span-12">
+    <div class="eyebrow">Research</div>
+    <h1>Research</h1>
+    <p class="lede">
+      My work spans survey research, computational social science, causal inference, and political institutions.
+    </p>
+    <p>
+      Across these areas, I am interested in how modern statistical and computational tools can improve measurement,
+      strengthen inference, and help us study complex institutional and behavioral processes.
+    </p>
+    <p>
+      The site is organized around durable research themes rather than temporary pipeline labels so that published work,
+      ongoing agendas, and methods contributions can sit in the same public-facing structure.
+    </p>
+  </section>
+
+  <section class="section-grid">
+    {site.themes.map((theme) => (
+      <article class="panel span-6">
+        <h2>{theme.title}</h2>
+        <p>{theme.body}</p>
+      </article>
+    ))}
+  </section>
+</BaseLayout>
