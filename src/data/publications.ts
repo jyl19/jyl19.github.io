@@ -25,7 +25,7 @@ export const publications: Publication[] = [
     category: "institutions",
     featured: true,
     abstract:
-      "This paper develops a pairwise-comparison approach to legislative complexity and tests whether large language models can reproduce judgments that would otherwise require human coding. It shows that, with careful prompts and bridging texts, LLM-based comparisons track human assessments closely enough to support scalable measurement of bill complexity."
+      "This paper treats legislative complexity as a latent trait and measures it through pairwise comparisons of bill text. Comparing Bradley-Terry models built from human judgments to parallel models built from LLM judgments, it finds that carefully guided LLM prompts reproduce the main structure of human coding fairly well, while unguided comparisons perform much worse. The upshot is that LLMs can help scale complexity measurement, but only when researchers provide strong anchors and clear comparison rules."
   },
   {
     title: "The Language of Delegation: An NLP Analysis of Congressional Bill Text",
@@ -51,7 +51,7 @@ export const publications: Publication[] = [
     category: "deliberation",
     featured: true,
     abstract:
-      "This study evaluates whether an automated deliberation platform can reproduce some of the democratic benefits associated with in-person deliberation. It examines whether structured online discussion can move participants toward more deliberative attitudes and behaviors at larger scale."
+      "Using a large online deliberation experiment with AI-assisted moderation and a follow-up during the 2022 midterms, this paper asks whether deliberation can be scaled without losing its civic effects. It shows that participants became more attentive to campaigns, more politically knowledgeable, and more likely to connect their eventual vote choices to considered policy views. The paper argues that organized automated discussion can create more deliberative voters, even outside the face-to-face mini-public format."
   },
   {
     title: "State Capacity and COVID-19 Responses: Comparing the U.S. States",
@@ -63,7 +63,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "evaluation",
     abstract:
-      "This article studies variation in pandemic performance across the American states through the lens of state capacity. Using a new subnational measure, it argues that states with stronger capacity were better able to limit excess deaths and distribute vaccines, even after accounting for partisanship and other contextual factors."
+      "This article builds a subnational measure of state capacity and uses it to explain why some states handled the pandemic better than others. It finds that higher-capacity states had fewer excess deaths in 2020 and distributed vaccines more effectively in early 2021, even after accounting for partisanship, demographics, geography, and social capital. It also shows that anti-COVID policies worked best where states had enough administrative capacity to actually enforce them."
   },
   {
     title: "Can Deliberation Have Lasting Effects? Reflections on 'America in One Room.'",
@@ -76,7 +76,7 @@ export const publications: Publication[] = [
     category: "deliberation",
     featured: true,
     abstract:
-      "This article examines whether the effects of deliberation persist well beyond the event itself. It argues that the 'America in One Room' experience generated a durable civic awakening that shaped subsequent political engagement, knowledge acquisition, and vote-related intentions."
+      "Drawing on the America in One Room field experiment, this paper studies whether a weekend of structured deliberation can still shape political behavior about a year later. It finds durable effects on turnout intentions, candidate choice, and several components of political engagement, especially among participants whose initial views were not tightly aligned with partisan cues. The analysis argues that deliberation worked less by freezing issue opinions in place than by producing a broader civic awakening that carried into the 2020 election."
   },
   {
     title: "Leveraging Predictive Modelling from Multiple Sources of Big Data to Improve Sample Efficiency and Reduce Survey Nonresponse Error",
@@ -113,7 +113,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "institutions",
     abstract:
-      "This paper asks whether changes in congressional procedure affect measured polarization by changing the roll-call record itself. Comparing matched bills that bypass committee with similar bills moving through regular order, it finds that committee bypass dampens rather than amplifies polarization estimates."
+      "This paper asks whether congressional procedure changes measured polarization by changing which votes make it into the roll-call record. Using matched comparisons between House bills that bypass committee and similar bills that move through regular order, it finds that bypassed bills tend to pass by narrower margins but are less likely to produce clean party-unity votes. As a result, committee bypass appears to dampen, rather than inflate, standard polarization estimates."
   },
   {
     title: "Environmentalism among Poor and Rich Countries: A Natural-Language-Processing Approach to Conversational Dynamics",
