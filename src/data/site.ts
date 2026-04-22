@@ -32,15 +32,16 @@ export const site = {
   title: "Senior Research Methodologist, NORC at the University of Chicago",
   email: "lerner-joshua@norc.org",
   url: "https://jyl19.github.io",
-  socialImage: "/images/joshua-lerner-headshot-square.jpg",
+  socialImage: "/images/social-card.png",
+  socialImageAlt: "Joshua Y. Lerner website preview card",
   hero: "Research methodologist working on measurement, inference, text, and institutions.",
   intro:
-    "I work across survey methodology, political science, NLP and generative AI, and causal inference. Much of that work asks how to measure complex social and political phenomena more credibly and how to use computational tools in disciplined ways for real research problems.",
+    "I work across survey methodology, political science, NLP and generative AI, and causal inference. Much of that work is about measuring complex social and political phenomena more credibly and using computational tools in disciplined ways for real research problems.",
   summary:
-    "My research brings together survey methodology, computational social science, political institutions, public opinion, and applied program evaluation. Across those areas, the common concern is better empirical work: clearer constructs, stronger designs, and more credible ways to learn from difficult data.",
+    "My research brings together survey methodology, computational social science, political institutions, public opinion, and applied program evaluation. Across those areas, the common concern is better empirical work: clearer constructs, stronger designs, and more credible learning from difficult data.",
   bio: [
-    "I work on problems where measurement, inference, text, and institutions meet. Some of that work is methodological: using NLP and generative AI to improve how researchers classify, summarize, and learn from complex data, especially in surveys and political text. Some of it is applied: using strong research designs to evaluate policies, programs, and interventions in settings where the data are messy and the stakes are real.",
-    "Across those areas, the common thread is fairly simple. I am interested in how we can make better empirical claims about complicated phenomena without losing sight of construct validity, institutional context, or the limits of our tools.",
+    "I work on problems where measurement, inference, text, and institutions meet. Some of that work is methodological: using NLP and generative AI to classify, summarize, and learn from complex data, especially in surveys and political text. Some of it is applied: using strong research designs to evaluate policies, programs, and interventions in messy, high-stakes settings.",
+    "Across those areas, the common thread is simple: how to make better empirical claims about complicated phenomena without losing sight of construct validity, institutional context, or the limits of our tools.",
     "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology.",
     "Before joining NORC, I held positions at Duke University and Northwestern University Pritzker School of Law. I received my PhD in Political Science from Duke University."
   ],
