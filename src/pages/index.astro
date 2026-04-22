@@ -3,7 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { publications } from "../data/publications";
 import { site } from "../data/site";
 
-const featured = publications.filter((item) => item.featured).slice(0, 5);
+const featured = publications
+  .filter((item) => item.featured)
+  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+  .slice(0, 5);
 ---
 
 <BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
@@ -24,7 +27,7 @@ const featured = publications.filter((item) => item.featured).slice(0, 5);
     <p class="lede">{site.hero}</p>
     <p>{site.intro}</p>
     <p>
-      For an institutional profile and additional background on my applied work, see my
+      For more on my applied work at NORC, see my
       <a href="https://www.norc.org/about/experts/joshua-lerner.html"> NORC experts page</a>.
     </p>
     <div class="cta-row">
@@ -32,14 +35,11 @@ const featured = publications.filter((item) => item.featured).slice(0, 5);
       <a class="button" href="/cv">Download CV</a>
       <a class="button" href="https://www.norc.org/about/experts/joshua-lerner.html">NORC Profile</a>
     </div>
-    <div class="section tag-row">
-      {site.themes.map((theme) => <span class="tag">{theme.title}</span>)}
-    </div>
   </section>
 
   <section class="section-grid">
     <div class="panel span-8">
-      <h2>Overview</h2>
+      <h2>Approach</h2>
       <p class="lede">{site.summary}</p>
       {site.bio.map((paragraph) => <p>{paragraph}</p>)}
     </div>
@@ -56,6 +56,11 @@ const featured = publications.filter((item) => item.featured).slice(0, 5);
   <section class="section-grid">
     <div class="panel span-8">
       <h2>Research Areas</h2>
+      <p>
+        These research areas are connected by a common concern: how to measure difficult concepts
+        well and make stronger empirical claims in settings shaped by text, institutions,
+        behavior, and incomplete data.
+      </p>
       <div class="section-grid">
         {site.themes.map((theme) => (
           <article class="span-6">
@@ -67,11 +72,12 @@ const featured = publications.filter((item) => item.featured).slice(0, 5);
     </div>
 
     <div class="panel span-4">
-      <h2>Current Focus</h2>
+      <h2>Signature Projects</h2>
       <div class="compact-list">
-        {site.currentFocus.map((item) => (
+        {site.signatureProjects.map((item) => (
           <div class="compact-item">
-            <p>{item}</p>
+            <div class="mini-title"><strong>{item.title}</strong></div>
+            <p>{item.body}</p>
           </div>
         ))}
       </div>

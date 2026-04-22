@@ -1,16 +1,46 @@
+import type { PublicationCategory } from "./publications";
+
+const themes: { key: PublicationCategory; title: string; body: string }[] = [
+  {
+    key: "survey",
+    title: "Survey Research, NLP, and Generative AI",
+    body:
+      "I study how NLP and generative AI can improve measurement in surveys, including open-ended response coding, response-quality assessment, fraud detection, questionnaire design, and related validity problems."
+  },
+  {
+    key: "evaluation",
+    title: "Causal Inference and Program Evaluation",
+    body:
+      "I use design-based and econometric methods to evaluate policies and programs in real-world settings, with attention to treatment timing, imperfect implementation, and the inferential limits of administrative and observational data."
+  },
+  {
+    key: "institutions",
+    title: "Political Institutions and Legislative Text",
+    body:
+      "My work on political institutions focuses especially on Congress, legislative text, delegation, procedure, ideology, and how institutional behavior can be measured from text and other difficult-to-observe signals."
+  },
+  {
+    key: "deliberation",
+    title: "Public Opinion and Deliberation",
+    body:
+      "I study deliberation, political discussion, and public opinion, including whether structured discussion can change what citizens know, how they reason, and how they participate."
+  }
+];
+
 export const site = {
   name: "Joshua Y. Lerner",
   title: "Senior Research Methodologist, NORC at the University of Chicago",
   email: "lerner-joshua@norc.org",
-  hero:
-    "Survey methodology, NLP, generative AI, and causal inference for public opinion, program evaluation, and political institutions.",
+  url: "https://jyl19.github.io",
+  socialImage: "/images/joshua-lerner-headshot-square.jpg",
+  hero: "Research methodologist working on measurement, inference, text, and institutions.",
   intro:
-    "I work at the intersection of survey methodology, natural language processing, generative AI, causal inference, and the study of political institutions.",
+    "I work across survey methodology, political science, NLP and generative AI, and causal inference. Much of that work asks how to measure complex social and political phenomena more credibly and how to use computational tools in disciplined ways for real research problems.",
   summary:
-    "My work combines computational and statistical methods to improve measurement, strengthen inference, and study how people, institutions, and survey instruments behave in complex settings.",
+    "My research brings together survey methodology, computational social science, political institutions, public opinion, and applied program evaluation. Across those areas, the common concern is better empirical work: clearer constructs, stronger designs, and more credible ways to learn from difficult data.",
   bio: [
-    "My research uses computational and statistical methods to study public opinion, survey measurement, program evaluation, legislative politics, and institutional behavior.",
-    "Recent work includes AI and NLP in survey practice, response quality and AI-generated survey fraud, causal inference and econometric methods for large-scale evaluations, and the analysis of political discussion and legislative text.",
+    "I work on problems where measurement, inference, text, and institutions meet. Some of that work is methodological: using NLP and generative AI to improve how researchers classify, summarize, and learn from complex data, especially in surveys and political text. Some of it is applied: using strong research designs to evaluate policies, programs, and interventions in settings where the data are messy and the stakes are real.",
+    "Across those areas, the common thread is fairly simple. I am interested in how we can make better empirical claims about complicated phenomena without losing sight of construct validity, institutional context, or the limits of our tools.",
     "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology.",
     "Before joining NORC, I held positions at Duke University and Northwestern University Pritzker School of Law. I received my PhD in Political Science from Duke University."
   ],
@@ -23,33 +53,28 @@ export const site = {
     { label: "Google Scholar", href: "https://scholar.google.com/citations?user=0pVC2RcAAAAJ&hl=en" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/josh-lerner-26272922/" }
   ],
-  themes: [
+  themes,
+  signatureProjects: [
     {
-      title: "Survey Research, NLP, and Generative AI",
+      title: "AI and measurement in survey research",
       body:
-        "I study how NLP and generative AI can be used in survey research, including open-ended response analysis, response quality, AI-generated survey fraud, questionnaire design, and related measurement problems."
+        "Using NLP and generative AI to improve coding, response-quality assessment, open-ended analysis, and other hard measurement tasks in surveys."
     },
     {
-      title: "Causal Inference and Program Evaluation",
+      title: "Deliberation, public opinion, and political behavior",
       body:
-        "I work on applied causal inference and econometric methods for large-scale evaluations, including matching, weighting, difference-in-differences, and related approaches for policy and program analysis."
+        "Studying whether structured discussion, including AI-assisted deliberation, can change what citizens know, how they think, and how they participate."
     },
     {
-      title: "Political Institutions and Legislative Text",
+      title: "Legislative text and political institutions",
       body:
-        "My substantive research examines political institutions, especially Congress, legislative procedure, delegation, agenda setting, ideology, and the language of laws and institutional decision-making."
+        "Using text analysis and measurement models to study delegation, complexity, and institutional behavior in Congress and related settings."
     },
     {
-      title: "Public Opinion and Deliberation",
+      title: "Applied causal inference for policy evaluation",
       body:
-        "I also study deliberation, political discussion, and public opinion, including work on the long-run effects of deliberative engagement and the analysis of conversational and civic text."
+        "Designing and executing evaluations of policies and programs in real-world environments where treatment timing, implementation, and data quality are imperfect."
     }
-  ],
-  currentFocus: [
-    "Survey methodology and AI-assisted measurement",
-    "Response quality, fraud detection, and open-ended survey data",
-    "Causal inference for policy and program evaluation",
-    "Legislative text, delegation, and political institutions"
   ],
   talks: [
     {

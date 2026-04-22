@@ -1,4 +1,5 @@
 export type PublicationSection = "peerReviewed" | "other";
+export type PublicationCategory = "survey" | "evaluation" | "institutions" | "deliberation";
 
 export type Publication = {
   title: string;
@@ -8,7 +9,7 @@ export type Publication = {
   href?: string;
   doi?: string;
   section: PublicationSection;
-  category: "survey" | "evaluation" | "institutions" | "deliberation";
+  category: PublicationCategory;
   featured?: boolean;
   abstract?: string;
 };

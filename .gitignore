@@ -3,3 +3,4 @@ dist
 .astro
 tmp_photos
 Headshots -- 2024
+.DS_Store

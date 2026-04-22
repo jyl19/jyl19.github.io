@@ -6,22 +6,35 @@ import { publicationCategories, publications } from "../data/publications";
 const researchSections = publicationCategories.map(([key, label]) => ({
   key,
   label,
-  theme: site.themes.find((theme) => theme.title === label),
-  items: publications.filter((item) => item.category === key).slice(0, 3)
+  theme: site.themes.find((theme) => theme.key === key),
+  items: publications
+    .filter((item) => item.section === "peerReviewed" && item.category === key)
+    .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+    .slice(0, 3)
 }));
 ---
 
-<BaseLayout title={`Research | ${site.name}`} description="Research areas and thematic overview.">
+<BaseLayout
+  title={`Research | ${site.name}`}
+  description="Research on survey methodology, causal inference, political institutions, text, and deliberation."
+>
   <section class="panel span-12">
     <div class="eyebrow">Research</div>
     <h1>Research</h1>
     <p class="lede section-intro">
-      I work across survey methodology, computational social science, causal inference, and political institutions,
-      with an emphasis on measurement, inference, and applied public-facing research problems.
+      I work across survey methodology, computational social science, causal inference, and
+      political institutions, but those areas are less separate in practice than they often
+      appear on paper.
     </p>
     <p class="section-intro">
-      This page is organized around the main strands of my research rather than publication status. Each section gives
-      a short overview of the agenda along with a few representative papers.
+      Much of my work is about how to study complicated substantive questions when the core
+      concepts are hard to observe directly and the data do not arrive in tidy form.
+    </p>
+    <p class="section-intro">
+      That leads me repeatedly to problems of measurement, construct validity, and research
+      design. In some projects, the relevant tools are NLP or generative AI. In others, they are
+      design-based or econometric methods for causal inference. In both cases, the goal is the
+      same: better empirical work on questions that matter.
     </p>
     <div class="anchor-row">
       {researchSections.map((section) => (
@@ -34,7 +47,6 @@ const researchSections = publicationCategories.map(([key, label]) => ({
     {researchSections.map((section) => (
       <article class="panel span-6 theme-card" id={section.key}>
         <div>
-          <div class="eyebrow">Area</div>
           <h2>{section.label}</h2>
           <p>{section.theme?.body}</p>
         </div>
@@ -56,20 +68,21 @@ const researchSections = publicationCategories.map(([key, label]) => ({
 
   <section class="section-grid">
     <div class="panel span-8">
-      <div class="eyebrow">Approach</div>
       <h2>How The Pieces Fit Together</h2>
       <p>
-        A lot of my work sits at the overlap of substantive questions and methodological development. Survey projects
-        often draw on NLP or generative AI tools; evaluation work leans on design-based and econometric methods;
-        institutional work uses text, procedure, and measurement to study political behavior.
+        A lot of my work lives in the overlap between substantive inquiry and methodological
+        development. Survey projects draw on NLP and generative AI to improve coding and
+        measurement. Evaluation work relies on careful design to recover credible causal effects
+        under real-world constraints. Institutional work uses text, procedure, and measurement to
+        study how political actors behave.
       </p>
       <p>
-        The unifying thread is building better ways to measure complex phenomena and make stronger empirical claims in
-        settings that are messy, high-dimensional, or institutionally constrained.
+        The unifying logic is not a commitment to any one method. It is a commitment to
+        disciplined empirical research: clear constructs, appropriate tools, and stronger
+        inference in settings that are noisy, high-dimensional, or institutionally complex.
       </p>
     </div>
     <div class="panel span-4">
-      <div class="eyebrow">Links</div>
       <h2>Related Pages</h2>
       <div class="compact-list">
         <div class="compact-item">
