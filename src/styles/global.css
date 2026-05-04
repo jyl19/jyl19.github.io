@@ -155,7 +155,10 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(1.95rem, 4.2vw, 3.2rem);
+  font-size: clamp(1.85rem, 3.8vw, 3rem);
+}
+
+.hero h1 {
   max-width: 12ch;
 }
 
@@ -188,18 +191,15 @@ p {
 }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  text-decoration: none;
-}
-
-.button {
   padding: 0.62rem 0.92rem;
   border: 1px solid var(--line);
+  border-radius: 999px;
   color: var(--text);
+  display: inline-flex;
+  align-items: center;
   background: white;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 
 .button.primary {

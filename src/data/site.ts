@@ -33,17 +33,16 @@ export const site = {
   email: "lerner-joshua@norc.org",
   url: "https://jyl19.github.io",
   socialImage: "/images/social-card.png",
-  socialImageAlt: "Joshua Y. Lerner website preview card",
+  socialImageAlt: "Joshua Y. Lerner name and research focus preview card",
   hero: "Research methodologist working on measurement, inference, text, and institutions.",
   intro:
-    "I work across survey methodology, political science, NLP and generative AI, and causal inference. Much of that work is about measuring complex social and political phenomena more credibly and using computational tools in disciplined ways for real research problems.",
+    "I work across survey methodology, political science, NLP and generative AI, and causal inference. The common problem is measurement: how to study complex social and political phenomena with data that are textual, administrative, incomplete, or behaviorally messy.",
   summary:
-    "My research brings together survey methodology, computational social science, political institutions, public opinion, and applied program evaluation. Across those areas, the common concern is better empirical work: clearer constructs, stronger designs, and more credible learning from difficult data.",
+    "My work links computational tools with research design. I build and evaluate measures for survey responses, legislative text, public opinion, and policy programs, with attention to construct validity and credible inference.",
   bio: [
-    "I work on problems where measurement, inference, text, and institutions meet. Some of that work is methodological: using NLP and generative AI to classify, summarize, and learn from complex data, especially in surveys and political text. Some of it is applied: using strong research designs to evaluate policies, programs, and interventions in messy, high-stakes settings.",
-    "Across those areas, the common thread is simple: how to make better empirical claims about complicated phenomena without losing sight of construct validity, institutional context, or the limits of our tools.",
-    "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology.",
-    "Before joining NORC, I held positions at Duke University and Northwestern University Pritzker School of Law. I received my PhD in Political Science from Duke University."
+    "Methodological projects use NLP and generative AI to code open-ended survey responses, assess response quality, classify legislative text, and summarize complex records. Applied projects use design-based and econometric approaches to evaluate policies and programs when implementation, timing, and data quality are imperfect.",
+    "The throughline is disciplined empirical work: clear constructs, appropriate models, and claims that stay connected to institutional context and the limits of the data.",
+    "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology. I received my PhD in Political Science from Duke University and previously held positions at Duke and Northwestern University Pritzker School of Law."
   ],
   links: [
     { label: "Publications", href: "/publications" },
@@ -62,22 +61,22 @@ export const site = {
     {
       title: "AI and measurement in survey research",
       body:
-        "Using NLP and generative AI to improve coding, response-quality assessment, open-ended analysis, and other hard measurement tasks in surveys."
+        "Using NLP and generative AI to improve open-ended coding, response-quality assessment, questionnaire evaluation, and related validity checks."
     },
     {
       title: "Deliberation, public opinion, and political behavior",
       body:
-        "Studying whether structured discussion, including AI-assisted deliberation, can change what citizens know, how they think, and how they participate."
+        "Studying whether structured discussion, including AI-assisted deliberation, changes what citizens know, how they reason, and how they participate."
     },
     {
       title: "Legislative text and political institutions",
       body:
-        "Using text analysis and measurement models to study delegation, complexity, and institutional behavior in Congress and related settings."
+        "Using text analysis and measurement models to study delegation, complexity, procedure, and institutional behavior in Congress."
     },
     {
       title: "Applied causal inference for policy evaluation",
       body:
-        "Designing and executing evaluations of policies and programs in real-world environments where treatment timing, implementation, and data quality are imperfect."
+        "Designing evaluations of policies and programs where treatment timing, implementation, and administrative data are imperfect."
     }
   ],
 };
