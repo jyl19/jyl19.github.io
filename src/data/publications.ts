@@ -283,7 +283,7 @@ export const workingPapers: WorkingPaper[] = [
     category: "institutions"
   },
   {
-    title: "Measuring Institutional Influences on Behavior: Approaches to Overcoming Selection Bias in Multination Surveys",
+    title: "Measuring Institutional Influences on Behavior: Approaches to Overcoming Selection Bias in Multi-nation Surveys",
     authors: "with John Aldrich, Victoria Dounoucos, Haohan Chen, and Gregory Schober",
     status: "Working paper",
     category: "survey"

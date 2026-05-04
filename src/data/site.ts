@@ -49,6 +49,7 @@ export const site = {
     { label: "Publications", href: "/publications" },
     { label: "Research", href: "/research" },
     { label: "Code", href: "/code" },
+    { label: "Talks & Teaching", href: "/talks" },
     { label: "CV", href: "/cv" },
     { label: "Contact", href: "/contact" },
     { label: "NORC Profile", href: "https://www.norc.org/about/experts/joshua-lerner.html" },
@@ -79,26 +80,4 @@ export const site = {
         "Designing and executing evaluations of policies and programs in real-world environments where treatment timing, implementation, and data quality are imperfect."
     }
   ],
-  talks: [
-    {
-      title: "How to Use NLP and Generative AI in Survey Research",
-      venue: "AAPOR Mid-Year Short Course",
-      year: 2024
-    },
-    {
-      title: "How to Use NLP and Generative AI in Survey Research",
-      venue: "WAPOR Webinar Short Course",
-      year: 2025
-    },
-    {
-      title: "What Can LLMs Not (yet!) Do for Research",
-      venue: "SurvAI-Day 2024",
-      year: 2024
-    },
-    {
-      title: "Legislation and Natural Language Processing",
-      venue: "Duke University School of Law",
-      year: 2019
-    }
-  ]
 };

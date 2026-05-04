@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { talks } from "../data/professional";
 import { publications } from "../data/publications";
 import { site } from "../data/site";
 
@@ -7,6 +8,11 @@ const featured = publications
   .filter((item) => item.featured)
   .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
   .slice(0, 5);
+
+const featuredTalks = talks
+  .filter((talk) => talk.featured)
+  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+  .slice(0, 4);
 ---
 
 <BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
@@ -105,7 +111,7 @@ const featured = publications
     <div class="panel span-4">
       <h2>Recent Talks</h2>
       <div class="compact-list">
-        {site.talks.map((talk) => (
+        {featuredTalks.map((talk) => (
           <div class="compact-item">
             <div class="pub-title"><strong>{talk.title}</strong></div>
             <p>{talk.venue}, {talk.year}.</p>

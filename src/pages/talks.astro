@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { conferenceSeries, talks, teaching } from "../data/professional";
+import { site } from "../data/site";
+
+const talksByYear = [...talks].sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+---
+
+<BaseLayout
+  title={`Talks and Teaching | ${site.name}`}
+  description="Talks, short courses, conference presentations, and teaching for Joshua Y. Lerner."
+>
+  <section class="panel">
+    <div class="eyebrow">Professional Materials</div>
+    <h1>Talks and Teaching</h1>
+    <p class="lede section-intro">
+      Short courses, invited lectures, conference activity, and teaching connected to my work in
+      survey methodology, computational social science, causal inference, and political
+      institutions.
+    </p>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-8">
+      <h2>Selected Talks and Short Courses</h2>
+      <div class="list">
+        {talksByYear.map((talk) => (
+          <article class="pub">
+            <div class="pub-title"><strong>{talk.title}</strong></div>
+            <p>{talk.coauthors ? `${talk.coauthors}. ` : ""}{talk.venue}, {talk.year}.</p>
+            <div class="pub-meta">
+              <span class="status">{talk.type}</span>
+              {talk.href && <a class="pub-link" href={talk.href}>View listing</a>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="panel span-4">
+      <h2>Conference Activity</h2>
+      <div class="compact-list">
+        {conferenceSeries.map((series) => (
+          <div class="compact-item">
+            <div class="mini-title"><strong>{series.name}</strong></div>
+            <p>{series.years}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-12">
+      <h2>Teaching</h2>
+      <div class="list">
+        {teaching.map((item) => (
+          <article class="pub">
+            <div class="pub-title"><strong>{item.course}</strong></div>
+            <p>{item.role}. {item.institution}, {item.years}.</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
