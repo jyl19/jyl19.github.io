@@ -50,8 +50,7 @@ export const talks: Talk[] = [
     venue: "Society for Research on Educational Effectiveness Annual Conference",
     year: 2021,
     type: "Conference presentation",
-    coauthors: "with Brandon Sepulvado and Jennifer Hamilton",
-    href: "https://sree.confex.com/sree/2021/meetingapp.cgi/Paper/3467"
+    coauthors: "with Brandon Sepulvado and Jennifer Hamilton"
   },
   {
     title: "Legislation and Natural Language Processing",
