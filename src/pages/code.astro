@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { githubProfile, repositories } from "../data/repositories";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  title={`Code | ${site.name}`}
+  description="Public code and repository links for Joshua Y. Lerner."
+>
+  <section class="panel">
+    <div class="eyebrow">Code</div>
+    <h1>Code and Data</h1>
+    <p class="lede section-intro">
+      Public repositories and code-related materials connected to my research and website.
+    </p>
+    <p class="section-intro">
+      The main code home is my <a href={githubProfile}>GitHub profile</a>. This page keeps the
+      currently public repositories visible from the site itself.
+    </p>
+  </section>
+
+  <section class="section-grid">
+    <div class="panel span-12">
+      <h2>Public Repositories</h2>
+      <div class="list">
+        {repositories.map((repo) => (
+          <article class="pub">
+            <div class="pub-title"><strong>{repo.title}</strong></div>
+            <p>{repo.description}</p>
+            <div class="pub-meta">
+              <span class="status">{repo.kind}</span>
+              <span class="status">{repo.language}</span>
+              <a class="pub-link" href={repo.href}>View repository</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

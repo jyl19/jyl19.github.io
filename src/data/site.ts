@@ -48,10 +48,12 @@ export const site = {
   links: [
     { label: "Publications", href: "/publications" },
     { label: "Research", href: "/research" },
+    { label: "Code", href: "/code" },
     { label: "CV", href: "/cv" },
     { label: "Contact", href: "/contact" },
     { label: "NORC Profile", href: "https://www.norc.org/about/experts/joshua-lerner.html" },
     { label: "Google Scholar", href: "https://scholar.google.com/citations?user=0pVC2RcAAAAJ&hl=en" },
+    { label: "GitHub", href: "https://github.com/jyl19" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/josh-lerner-26272922/" }
   ],
   themes,

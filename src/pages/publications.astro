@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { publicationCategories, publications } from "../data/publications";
+import { publicationCategories, publications, workingPapers } from "../data/publications";
 import { site } from "../data/site";
 
 const groupedPublications = publicationCategories.map(([key, label]) => ({
@@ -10,18 +10,26 @@ const groupedPublications = publicationCategories.map(([key, label]) => ({
     .filter((item) => item.section === "peerReviewed" && item.category === key)
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
 }));
+
+const groupedWorkingPapers = publicationCategories
+  .map(([key, label]) => ({
+    key: `${key}-working`,
+    label,
+    items: workingPapers.filter((item) => item.category === key)
+  }))
+  .filter((group) => group.items.length > 0);
 ---
 
 <BaseLayout
   title={`Publications | ${site.name}`}
-  description="Peer-reviewed publications grouped by survey research, evaluation, political institutions, and deliberation."
+  description="Peer-reviewed publications and working papers grouped by survey research, evaluation, political institutions, and deliberation."
 >
   <section class="panel">
     <div class="eyebrow">Publications</div>
     <h1>Publications</h1>
     <p class="lede section-intro">
-      Peer-reviewed publications, grouped by the main clusters of my research, with short
-      summaries for readers who want a quick sense of each project.
+      Peer-reviewed publications and working papers, grouped by the main clusters of my
+      research.
     </p>
     <p class="section-intro">
       Article links point to DOI or publisher pages when available.
@@ -30,6 +38,7 @@ const groupedPublications = publicationCategories.map(([key, label]) => ({
       {groupedPublications.map((group) => (
         <a class="anchor-link" href={`#${group.key}`}>{group.label}</a>
       ))}
+      <a class="anchor-link" href="#working-papers">Working Papers</a>
     </div>
   </section>
 
@@ -48,6 +57,38 @@ const groupedPublications = publicationCategories.map(([key, label]) => ({
                   <a class="pub-link" href={item.href}>Read article</a>
                 </div>
               )}
+            </article>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section class="section-grid" id="working-papers">
+    <div class="panel span-12">
+      <div class="eyebrow">Current Work</div>
+      <h2>Working Papers and Projects</h2>
+      <p class="section-intro">
+        This section lists working papers, papers under review, and active projects drawn from
+        the current CV. Status labels are included where they are useful for orientation.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-grid stack-lg">
+    {groupedWorkingPapers.map((group) => (
+      <div class="panel span-12" id={group.key}>
+        <h2>{group.label}</h2>
+        <div class="list">
+          {group.items.map((item) => (
+            <article class="pub">
+              <div class="pub-title"><strong>{item.title}</strong></div>
+              {item.authors && <p>{item.authors}.</p>}
+              <div class="pub-meta">
+                {item.status && <span class="status">{item.status}</span>}
+                {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
+              </div>
+              {item.note && <p>{item.note}.</p>}
             </article>
           ))}
         </div>

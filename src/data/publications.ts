@@ -14,6 +14,15 @@ export type Publication = {
   abstract?: string;
 };
 
+export type WorkingPaper = {
+  title: string;
+  authors?: string;
+  status?: string;
+  category: PublicationCategory;
+  href?: string;
+  note?: string;
+};
+
 export const publications: Publication[] = [
   {
     title: "Can We Measure Legislative Complexity with LLMs?",
@@ -203,6 +212,115 @@ export const publications: Publication[] = [
     category: "institutions",
     abstract:
       "A review essay on Timothy Groseclose's Left Turn and debates over media bias."
+  }
+];
+
+export const workingPapers: WorkingPaper[] = [
+  {
+    title: "Setting the Committee Agenda: Measuring Speaker Influence in Congressional Hearings",
+    authors: "with Robert Shaffer",
+    status: "Conditional acceptance at Political Science Research and Methods",
+    category: "institutions"
+  },
+  {
+    title: "Using Deep and Active Learning Classifiers to Identify Congressional Delegation to Administrative Agencies",
+    authors: "with Gregory Spell",
+    status: "Working paper",
+    category: "institutions",
+    note: "Center for the Study of the Administrative State Working Paper series, George Mason Law"
+  },
+  {
+    title: "The Trouble with Coarsening: Coarsened Exact Matching as Balancing Method",
+    authors: "with Bernard Black and Parth Lalkiya",
+    status: "Under review",
+    category: "evaluation"
+  },
+  {
+    title: "From Hearings to Legislation: Idea Transmission and the Writing of Laws in Congress",
+    status: "Revise and resubmit from Congress and the Presidency",
+    category: "institutions"
+  },
+  {
+    title: "Presidential Ads, Campaign Contributions and Asymmetric Partisanship: A Matching and Reweighting Approach",
+    authors: "with Bernard Black",
+    status: "Under review",
+    category: "evaluation"
+  },
+  {
+    title: "Measuring State Capacity in the U.S. States",
+    authors: "with Kiran Auerbach and Hannah Ridge",
+    status: "Under review",
+    category: "evaluation"
+  },
+  {
+    title: "Electoral Competition and State Capacity in the U.S. States",
+    authors: "with Kiran Auerbach and Hannah Ridge",
+    status: "Under review",
+    category: "evaluation"
+  },
+  {
+    title: "Measuring the Undercounted: Ideology and Partisanship in Probability-Based Panel Recruitment Nonresponse Follow-up",
+    authors: "with Ipek Bilgen, David Dutwin, and J. Michael Dennis",
+    status: "Working paper",
+    category: "survey"
+  },
+  {
+    title: "Navigating New Methods for Dealing with Common Threats to Validity in Difference-in-Differences Designs with Health Care Data",
+    authors: "with Kiegan Rice, Liyang Xie, and Quentin Brummet",
+    status: "Working paper",
+    category: "evaluation"
+  },
+  {
+    title: "Different Stages, Different Constituencies, Different Scores? Estimating Ideology Throughout the Campaign Cycle",
+    authors: "with Austin Bussing and Nicholas Howard",
+    status: "Working paper",
+    category: "institutions"
+  },
+  {
+    title: "Do Actions Speak Louder than Words? How Parties Reward Loyal Speech and Voting Behavior",
+    authors: "with Andrew Ballard and Shahryar Minhas",
+    status: "Working paper",
+    category: "institutions"
+  },
+  {
+    title: "Measuring Institutional Influences on Behavior: Approaches to Overcoming Selection Bias in Multination Surveys",
+    authors: "with John Aldrich, Victoria Dounoucos, Haohan Chen, and Gregory Schober",
+    status: "Working paper",
+    category: "survey"
+  },
+  {
+    title: "Parties and Agenda Setting: A Final Passage Approach to Ideal Point Estimation",
+    status: "Working paper",
+    category: "institutions"
+  },
+  {
+    title: "Dividing the Question: Concurrences on the Supreme Court and Ideal Point Estimation",
+    authors: "with Mathew D. McCubbins and Kristen Renberg",
+    status: "Working paper",
+    category: "institutions"
+  },
+  {
+    title: "A Bayesian Parametric Approach to Measuring Legislative Productivity",
+    authors: "with Austin Bussing",
+    status: "Work in progress",
+    category: "institutions"
+  },
+  {
+    title: "Matching Methods: A Comparison of Various Matching and Reweighting Strategies for Pure Observational Studies",
+    authors: "with Bernard Black and Parth Lalkiya",
+    status: "Work in progress",
+    category: "evaluation"
+  },
+  {
+    title: "Assessing Bayesian Instrumental Variables Approaches",
+    authors: "with Bernard Black",
+    status: "Work in progress",
+    category: "evaluation"
+  },
+  {
+    title: "Using Ideas as My Maps: Tracing the Flow of Ideas Through the Legislative Process",
+    status: "Work in progress",
+    category: "institutions"
   }
 ];
 
