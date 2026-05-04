@@ -312,6 +312,12 @@ export const workingPapers: WorkingPaper[] = [
     category: "evaluation"
   },
   {
+    title: "Inducing Polarization: Procedural Bias in Ideal Point Estimation",
+    authors: "with Austin Bussing",
+    status: "Work in progress",
+    category: "institutions"
+  },
+  {
     title: "Assessing Bayesian Instrumental Variables Approaches",
     authors: "with Bernard Black",
     status: "Work in progress",
