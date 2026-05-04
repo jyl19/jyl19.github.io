@@ -102,7 +102,7 @@ export const publications: Publication[] = [
       "The question in this paper is whether big-data classifiers can improve sample targeting for hard-to-reach and low-incidence survey populations. Using 15 classifiers trained on a large probability-based panel and tested across three survey datasets, the analysis shows that the models generally outperform geographic clustering and often improve on vendor flags, usually by trading some coverage for noticeably higher incidence. Those gains vary across targets, making classifier-based sampling most useful when researchers care about efficiently finding specific subpopulations."
   },
   {
-    title: "How Random Are Paid Medical Malpractice Claims?",
+    title: "Association of Past and Future Paid Medical Malpractice Claims",
     authors: "with Bernard Black, David Hyman, and David Magid",
     venue: "JAMA Health Forum",
     year: 2023,
@@ -126,10 +126,10 @@ export const publications: Publication[] = [
       "The paper asks whether congressional procedure changes measured polarization by changing which votes make it into the roll-call record. Matched comparisons between House bills that bypass committee and similar bills that move through regular order show that bypassed bills tend to pass by narrower margins but are less likely to produce clean party-unity votes. Committee bypass therefore appears to dampen, rather than inflate, standard polarization estimates."
   },
   {
-    title: "Environmentalism among Poor and Rich Countries: A Natural-Language-Processing Approach to Conversational Dynamics",
+    title: "Environmentalism among Poor and Rich Countries: Using Natural Language Processing to Handle Perfunctory Support and Rising Powers",
     authors: "with Tana Johnson",
     venue: "Review of International Political Economy",
-    year: 2021,
+    year: 2023,
     href: "https://doi.org/10.1080/09692290.2021.1974523",
     doi: "10.1080/09692290.2021.1974523",
     section: "peerReviewed",
@@ -230,10 +230,11 @@ export const workingPapers: WorkingPaper[] = [
     note: "Center for the Study of the Administrative State Working Paper series, George Mason Law"
   },
   {
-    title: "The Trouble with Coarsening: Coarsened Exact Matching as Balancing Method",
+    title: "The Trouble with Coarsened Exact Matching",
     authors: "with Bernard Black and Parth Lalkiya",
     status: "Under review",
-    category: "evaluation"
+    category: "evaluation",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3694749"
   },
   {
     title: "From Hearings to Legislation: Idea Transmission and the Writing of Laws in Congress",
@@ -241,7 +242,7 @@ export const workingPapers: WorkingPaper[] = [
     category: "institutions"
   },
   {
-    title: "Presidential Ads, Campaign Contributions and Asymmetric Partisanship: A Matching and Reweighting Approach",
+    title: "Spillover Presidential Ads and Campaign Contributions in a Polarized System",
     authors: "with Bernard Black",
     status: "Under review",
     category: "evaluation"
@@ -277,7 +278,7 @@ export const workingPapers: WorkingPaper[] = [
     category: "institutions"
   },
   {
-    title: "Do Actions Speak Louder than Words? How Parties Reward Loyal Speech and Voting Behavior",
+    title: "Do Actions Speak Louder than Words? Party Rewards for Loyal Speech and Voting Behavior in the U.S. House of Representatives",
     authors: "with Andrew Ballard and Shahryar Minhas",
     status: "Working paper",
     category: "institutions"
@@ -327,6 +328,19 @@ export const workingPapers: WorkingPaper[] = [
     title: "Using Ideas as My Maps: Tracing the Flow of Ideas Through the Legislative Process",
     status: "Work in progress",
     category: "institutions"
+  },
+  {
+    title: "Congressional Responsiveness to Public Opinion",
+    authors: "with Andrew Ballard",
+    status: "Working paper",
+    category: "institutions"
+  },
+  {
+    title: "Evaluating the Human-Likeness of LLM-Generated Open-Ended Responses",
+    authors: "with Brandon Sepulvado, Lilian Huang, and Soubhik Barari",
+    status: "NLPOR 2025 non-archival workshop paper",
+    category: "survey",
+    href: "https://openreview.net/forum?id=JPHiXxrLYn"
   }
 ];
 
