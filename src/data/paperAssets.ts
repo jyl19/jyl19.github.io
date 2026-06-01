@@ -13,8 +13,6 @@ export const publicPaperPdfs: Record<string, string> = {
     "/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/paper.pdf",
   "do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives":
     "/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/paper.pdf",
-  "evaluating-the-human-likeness-of-llm-generated-open-ended-responses":
-    "/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/paper.pdf",
   "electoral-competition-and-state-capacity-in-the-u-s-states":
     "/papers/electoral-competition-and-state-capacity-in-the-u-s-states/paper.pdf",
   "getting-the-message-across-evaluating-think-tank-influence-in-congress":

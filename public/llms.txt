@@ -413,6 +413,6 @@ Works in progress are metadata-only by default.
 - Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/metadata.json
 - Summary: https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/summary.md
-- Public PDF: https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/paper.pdf
+- Public PDF: not yet staged
 - Canonical source: https://openreview.net/forum?id=JPHiXxrLYn
 - Descriptor: NLPOR 2025 non-archival workshop paper
