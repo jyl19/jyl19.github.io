@@ -1,7 +1,7 @@
 # The Language of Delegation: An NLP Analysis of Congressional Bill Text
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Austin Bussing and Gregory P. Spell
 Venue: Legislative Studies Quarterly
 Year: 2025
@@ -15,4 +15,4 @@ An active-learning text classifier makes it possible to identify delegating lang
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/paper.pdf

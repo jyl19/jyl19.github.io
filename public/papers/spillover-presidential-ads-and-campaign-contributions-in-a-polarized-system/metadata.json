@@ -8,11 +8,11 @@
   "section": "workingPapers",
   "status": "under-review",
   "status_label": "Under review",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": null,
   "summary": null,
   "metadata_url": "https://jyl19.github.io/papers/spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system/paper.pdf"
 }

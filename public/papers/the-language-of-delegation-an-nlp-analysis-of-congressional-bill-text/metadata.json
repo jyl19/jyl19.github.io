@@ -7,11 +7,11 @@
   "category": "institutions",
   "section": "peerReviewed",
   "status": "published",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": "10.1111/lsq.70012",
   "canonical_url": "https://doi.org/10.1111/lsq.70012",
   "summary": "An active-learning text classifier makes it possible to identify delegating language across a much larger set of congressional bills than prior hand-coded studies could cover. The resulting measure tracks existing delegation benchmarks well and shows that delegation varies with sponsor ideology, party, and institutional position, changes over the legislative process, and reflects differences in the ideology and independence of the agencies receiving authority.",
   "metadata_url": "https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/paper.pdf"
 }

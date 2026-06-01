@@ -1,7 +1,7 @@
 # Does the Gift Keep on Giving? House Leadership PAC Donations Before and After Majority Status
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with John Aldrich, Andrew Ballard, and David Rohde
 Venue: Journal of Politics
 Year: 2017
@@ -15,4 +15,4 @@ House party leaders use leadership PAC donations to balance electoral strategy a
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/paper.pdf

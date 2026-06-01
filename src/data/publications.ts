@@ -1,3 +1,5 @@
+import { publicPaperPdfs } from "./paperAssets";
+
 export type PublicationSection = "peerReviewed" | "other";
 export type PublicationCategory = "survey" | "evaluation" | "institutions" | "deliberation";
 export type PaperLifecycleStatus =
@@ -58,7 +60,7 @@ export function getPaperMetadataPath(item: PaperItem) {
 }
 
 export function getPaperPdfPath(item: PaperItem) {
-  return item.visibility === "public-pdf" ? item.pdfPath : undefined;
+  return item.pdfPath ?? publicPaperPdfs[getPaperSlug(item)];
 }
 
 export function getWorkingPaperStatus(status?: string): PaperLifecycleStatus {

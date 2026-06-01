@@ -7,11 +7,11 @@
   "category": "institutions",
   "section": "peerReviewed",
   "status": "published",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": "10.1561/113.00000130",
   "canonical_url": "https://doi.org/10.1561/113.00000130",
   "summary": "Legislative complexity is treated here as a latent trait measured through pairwise comparisons of bill text. Bradley-Terry models built from human judgments are compared to parallel models built from LLM judgments, showing that carefully guided prompts reproduce the main structure of human coding fairly well, while unguided comparisons perform much worse. The larger implication is that LLMs can help scale complexity measurement, but only when researchers provide strong anchors and clear comparison rules.",
   "metadata_url": "https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/paper.pdf"
 }

@@ -1,7 +1,7 @@
 # Can We Measure Legislative Complexity with LLMs?
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Austin Bussing and Nicholas O. Howard
 Venue: Journal of Political Institutions and Political Economy
 Year: 2025
@@ -15,4 +15,4 @@ Legislative complexity is treated here as a latent trait measured through pairwi
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/paper.pdf

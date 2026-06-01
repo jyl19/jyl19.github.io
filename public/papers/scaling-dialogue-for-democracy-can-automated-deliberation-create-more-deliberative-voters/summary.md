@@ -1,7 +1,7 @@
 # Scaling Dialogue for Democracy: Can Automated Deliberation Create More Deliberative Voters?
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with James Fishkin, Valentin Bolotnyy, Alice Siu, and Norman Bradburn
 Venue: Perspectives on Politics
 Year: 2025
@@ -15,4 +15,4 @@ Built around a large online deliberation experiment with AI-assisted moderation 
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters/paper.pdf

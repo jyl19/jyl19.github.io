@@ -1,7 +1,7 @@
 # Using Deep and Active Learning Classifiers to Identify Congressional Delegation to Administrative Agencies
 
 Status: working-paper
-Visibility: metadata-only
+Visibility: public-pdf
 Status label: Working paper
 Authors: with Gregory Spell
 
@@ -12,4 +12,4 @@ Center for the Study of the Administrative State Working Paper series, George Ma
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/paper.pdf

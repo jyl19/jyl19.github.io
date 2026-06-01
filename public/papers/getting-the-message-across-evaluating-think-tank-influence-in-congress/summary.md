@@ -1,7 +1,7 @@
 # Getting the Message Across: Evaluating Think Tank Influence in Congress
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Venue: Public Choice
 Year: 2018
 DOI: 10.1007/s11127-018-0541-5
@@ -14,4 +14,4 @@ Using data on congressional floor-speech citations and committee testimony, this
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/getting-the-message-across-evaluating-think-tank-influence-in-congress/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/getting-the-message-across-evaluating-think-tank-influence-in-congress/paper.pdf

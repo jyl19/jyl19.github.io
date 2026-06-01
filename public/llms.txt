@@ -14,10 +14,10 @@ Works in progress are metadata-only by default.
 - Slug: can-we-measure-legislative-complexity-with-llms
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/metadata.json
 - Summary: https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/can-we-measure-legislative-complexity-with-llms/paper.pdf
 - Canonical source: https://doi.org/10.1561/113.00000130
 - Descriptor: Journal of Political Institutions and Political Economy
 
@@ -25,10 +25,10 @@ Works in progress are metadata-only by default.
 - Slug: the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/metadata.json
 - Summary: https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/paper.pdf
 - Canonical source: https://doi.org/10.1111/lsq.70012
 - Descriptor: Legislative Studies Quarterly
 
@@ -36,10 +36,10 @@ Works in progress are metadata-only by default.
 - Slug: scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters
 - Status: published
 - Category: deliberation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters/metadata.json
 - Summary: https://jyl19.github.io/papers/scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters/paper.pdf
 - Canonical source: https://doi.org/10.1017/S1537592724001749
 - Descriptor: Perspectives on Politics
 
@@ -47,10 +47,10 @@ Works in progress are metadata-only by default.
 - Slug: state-capacity-and-covid-19-responses-comparing-the-u-s-states
 - Status: published
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/metadata.json
 - Summary: https://jyl19.github.io/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/paper.pdf
 - Canonical source: https://doi.org/10.1017/spq.2024.11
 - Descriptor: State Politics & Policy Quarterly
 
@@ -58,10 +58,10 @@ Works in progress are metadata-only by default.
 - Slug: can-deliberation-have-lasting-effects-reflections-on-america-in-one-room
 - Status: published
 - Category: deliberation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/metadata.json
 - Summary: https://jyl19.github.io/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/paper.pdf
 - Canonical source: https://doi.org/10.1017/S0003055423001363
 - Descriptor: American Political Science Review
 
@@ -69,10 +69,10 @@ Works in progress are metadata-only by default.
 - Slug: leveraging-predictive-modelling-from-multiple-sources-of-big-data-to-improve-sample-efficiency-and-reduce-survey-nonresponse-error
 - Status: published
 - Category: survey
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/leveraging-predictive-modelling-from-multiple-sources-of-big-data-to-improve-sample-efficiency-and-reduce-survey-nonresponse-error/metadata.json
 - Summary: https://jyl19.github.io/papers/leveraging-predictive-modelling-from-multiple-sources-of-big-data-to-improve-sample-efficiency-and-reduce-survey-nonresponse-error/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/leveraging-predictive-modelling-from-multiple-sources-of-big-data-to-improve-sample-efficiency-and-reduce-survey-nonresponse-error/paper.pdf
 - Canonical source: https://doi.org/10.1093/jssam/smad016
 - Descriptor: Journal of Survey Statistics and Methodology
 
@@ -80,10 +80,10 @@ Works in progress are metadata-only by default.
 - Slug: association-of-past-and-future-paid-medical-malpractice-claims
 - Status: published
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/association-of-past-and-future-paid-medical-malpractice-claims/metadata.json
 - Summary: https://jyl19.github.io/papers/association-of-past-and-future-paid-medical-malpractice-claims/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/association-of-past-and-future-paid-medical-malpractice-claims/paper.pdf
 - Canonical source: https://doi.org/10.1001/jamahealthforum.2022.5436
 - Descriptor: JAMA Health Forum
 
@@ -91,10 +91,10 @@ Works in progress are metadata-only by default.
 - Slug: inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/metadata.json
 - Summary: https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/paper.pdf
 - Canonical source: https://doi.org/10.1561/113.00000068
 - Descriptor: Journal of Political Institutions and Political Economy
 
@@ -113,10 +113,10 @@ Works in progress are metadata-only by default.
 - Slug: the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/metadata.json
 - Summary: https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/paper.pdf
 - Canonical source: https://doi.org/10.1016/j.irle.2021.106020
 - Descriptor: International Review of Law and Economics
 
@@ -135,10 +135,10 @@ Works in progress are metadata-only by default.
 - Slug: physicians-with-multiple-paid-medical-malpractice-claims-are-they-outliers-or-just-unlucky
 - Status: published
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/physicians-with-multiple-paid-medical-malpractice-claims-are-they-outliers-or-just-unlucky/metadata.json
 - Summary: https://jyl19.github.io/papers/physicians-with-multiple-paid-medical-malpractice-claims-are-they-outliers-or-just-unlucky/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/physicians-with-multiple-paid-medical-malpractice-claims-are-they-outliers-or-just-unlucky/paper.pdf
 - Canonical source: https://doi.org/10.1016/j.irle.2019.03.006
 - Descriptor: International Review of Law and Economics
 
@@ -146,10 +146,10 @@ Works in progress are metadata-only by default.
 - Slug: getting-the-message-across-evaluating-think-tank-influence-in-congress
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/getting-the-message-across-evaluating-think-tank-influence-in-congress/metadata.json
 - Summary: https://jyl19.github.io/papers/getting-the-message-across-evaluating-think-tank-influence-in-congress/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/getting-the-message-across-evaluating-think-tank-influence-in-congress/paper.pdf
 - Canonical source: https://doi.org/10.1007/s11127-018-0541-5
 - Descriptor: Public Choice
 
@@ -157,10 +157,10 @@ Works in progress are metadata-only by default.
 - Slug: does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/metadata.json
 - Summary: https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/paper.pdf
 - Canonical source: https://doi.org/10.1086/692736
 - Descriptor: Journal of Politics
 
@@ -201,10 +201,10 @@ Works in progress are metadata-only by default.
 - Slug: using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies
 - Status: working-paper
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/metadata.json
 - Summary: https://jyl19.github.io/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Working paper
 
@@ -212,10 +212,10 @@ Works in progress are metadata-only by default.
 - Slug: the-trouble-with-coarsened-exact-matching
 - Status: under-review
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/the-trouble-with-coarsened-exact-matching/metadata.json
 - Summary: https://jyl19.github.io/papers/the-trouble-with-coarsened-exact-matching/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/the-trouble-with-coarsened-exact-matching/paper.pdf
 - Canonical source: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3694749
 - Descriptor: Under review
 
@@ -234,10 +234,10 @@ Works in progress are metadata-only by default.
 - Slug: spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system
 - Status: under-review
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system/metadata.json
 - Summary: https://jyl19.github.io/papers/spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Under review
 
@@ -245,10 +245,10 @@ Works in progress are metadata-only by default.
 - Slug: measuring-state-capacity-in-the-u-s-states
 - Status: under-review
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/measuring-state-capacity-in-the-u-s-states/metadata.json
 - Summary: https://jyl19.github.io/papers/measuring-state-capacity-in-the-u-s-states/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/measuring-state-capacity-in-the-u-s-states/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Under review
 
@@ -256,10 +256,10 @@ Works in progress are metadata-only by default.
 - Slug: electoral-competition-and-state-capacity-in-the-u-s-states
 - Status: under-review
 - Category: evaluation
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/electoral-competition-and-state-capacity-in-the-u-s-states/metadata.json
 - Summary: https://jyl19.github.io/papers/electoral-competition-and-state-capacity-in-the-u-s-states/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/electoral-competition-and-state-capacity-in-the-u-s-states/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Under review
 
@@ -289,10 +289,10 @@ Works in progress are metadata-only by default.
 - Slug: different-stages-different-constituencies-different-scores-estimating-ideology-throughout-the-campaign-cycle
 - Status: working-paper
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/different-stages-different-constituencies-different-scores-estimating-ideology-throughout-the-campaign-cycle/metadata.json
 - Summary: https://jyl19.github.io/papers/different-stages-different-constituencies-different-scores-estimating-ideology-throughout-the-campaign-cycle/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/different-stages-different-constituencies-different-scores-estimating-ideology-throughout-the-campaign-cycle/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Working paper
 
@@ -300,10 +300,10 @@ Works in progress are metadata-only by default.
 - Slug: do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives
 - Status: working-paper
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/metadata.json
 - Summary: https://jyl19.github.io/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Working paper
 
@@ -322,10 +322,10 @@ Works in progress are metadata-only by default.
 - Slug: parties-and-agenda-setting-a-final-passage-approach-to-ideal-point-estimation
 - Status: working-paper
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/parties-and-agenda-setting-a-final-passage-approach-to-ideal-point-estimation/metadata.json
 - Summary: https://jyl19.github.io/papers/parties-and-agenda-setting-a-final-passage-approach-to-ideal-point-estimation/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/parties-and-agenda-setting-a-final-passage-approach-to-ideal-point-estimation/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Working paper
 
@@ -344,10 +344,10 @@ Works in progress are metadata-only by default.
 - Slug: a-bayesian-parametric-approach-to-measuring-legislative-productivity
 - Status: work-in-progress
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/a-bayesian-parametric-approach-to-measuring-legislative-productivity/metadata.json
 - Summary: https://jyl19.github.io/papers/a-bayesian-parametric-approach-to-measuring-legislative-productivity/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/a-bayesian-parametric-approach-to-measuring-legislative-productivity/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Work in progress
 
@@ -410,9 +410,9 @@ Works in progress are metadata-only by default.
 - Slug: evaluating-the-human-likeness-of-llm-generated-open-ended-responses
 - Status: working-paper
 - Category: survey
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/metadata.json
 - Summary: https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/paper.pdf
 - Canonical source: https://openreview.net/forum?id=JPHiXxrLYn
 - Descriptor: NLPOR 2025 non-archival workshop paper

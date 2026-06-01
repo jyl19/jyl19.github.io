@@ -1,7 +1,7 @@
 # State Capacity and COVID-19 Responses: Comparing the U.S. States
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Kiran Auerbach and Hannah M. Ridge
 Venue: State Politics & Policy Quarterly
 Year: 2024
@@ -15,4 +15,4 @@ A new subnational measure of state capacity is used to explain why some states h
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/paper.pdf

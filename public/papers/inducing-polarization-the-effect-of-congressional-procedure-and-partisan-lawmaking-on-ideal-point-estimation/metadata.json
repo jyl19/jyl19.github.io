@@ -7,11 +7,11 @@
   "category": "institutions",
   "section": "peerReviewed",
   "status": "published",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": "10.1561/113.00000068",
   "canonical_url": "https://doi.org/10.1561/113.00000068",
   "summary": "The paper asks whether congressional procedure changes measured polarization by changing which votes make it into the roll-call record. Matched comparisons between House bills that bypass committee and similar bills that move through regular order show that bypassed bills tend to pass by narrower margins but are less likely to produce clean party-unity votes. Committee bypass therefore appears to dampen, rather than inflate, standard polarization estimates.",
   "metadata_url": "https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/paper.pdf"
 }

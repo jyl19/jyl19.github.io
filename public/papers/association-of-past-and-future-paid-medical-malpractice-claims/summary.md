@@ -1,7 +1,7 @@
 # Association of Past and Future Paid Medical Malpractice Claims
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Bernard Black, David Hyman, and David Magid
 Venue: JAMA Health Forum
 Year: 2023
@@ -15,4 +15,4 @@ Using national data on all licensed U.S. physicians, this study asks whether pri
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/association-of-past-and-future-paid-medical-malpractice-claims/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/association-of-past-and-future-paid-medical-malpractice-claims/paper.pdf

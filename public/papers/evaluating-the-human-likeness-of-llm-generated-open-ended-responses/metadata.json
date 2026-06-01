@@ -8,11 +8,11 @@
   "section": "workingPapers",
   "status": "working-paper",
   "status_label": "NLPOR 2025 non-archival workshop paper",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": "https://openreview.net/forum?id=JPHiXxrLYn",
   "summary": null,
   "metadata_url": "https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/paper.pdf"
 }

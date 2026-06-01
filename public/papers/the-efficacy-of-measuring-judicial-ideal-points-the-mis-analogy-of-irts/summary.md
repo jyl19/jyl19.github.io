@@ -1,7 +1,7 @@
 # The Efficacy of Measuring Judicial Ideal Points: The Mis-Analogy of IRTs
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Mathew D. McCubbins and Kristen Renberg
 Venue: International Review of Law and Economics
 Year: 2021
@@ -15,4 +15,4 @@ Martin-Quinn-style judicial ideal points are revisited here by focusing on the i
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/paper.pdf

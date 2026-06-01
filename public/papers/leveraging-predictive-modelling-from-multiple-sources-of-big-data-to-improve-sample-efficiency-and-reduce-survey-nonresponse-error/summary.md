@@ -1,7 +1,7 @@
 # Leveraging Predictive Modelling from Multiple Sources of Big Data to Improve Sample Efficiency and Reduce Survey Nonresponse Error
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with David Dutwin, Patrick Coyle, Ipek Bilgen, and Ned English
 Venue: Journal of Survey Statistics and Methodology
 Year: 2023
@@ -15,4 +15,4 @@ The question in this paper is whether big-data classifiers can improve sample ta
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/leveraging-predictive-modelling-from-multiple-sources-of-big-data-to-improve-sample-efficiency-and-reduce-survey-nonresponse-error/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/leveraging-predictive-modelling-from-multiple-sources-of-big-data-to-improve-sample-efficiency-and-reduce-survey-nonresponse-error/paper.pdf

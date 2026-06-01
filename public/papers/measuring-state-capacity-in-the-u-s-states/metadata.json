@@ -8,11 +8,11 @@
   "section": "workingPapers",
   "status": "under-review",
   "status_label": "Under review",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": null,
   "summary": null,
   "metadata_url": "https://jyl19.github.io/papers/measuring-state-capacity-in-the-u-s-states/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/measuring-state-capacity-in-the-u-s-states/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/measuring-state-capacity-in-the-u-s-states/paper.pdf"
 }

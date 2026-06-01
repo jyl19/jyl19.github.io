@@ -1,7 +1,7 @@
 # Can Deliberation Have Lasting Effects? Reflections on 'America in One Room.'
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with James Fishkin, Alice Siu, Valentin Bolotnyy, and Norman Bradburn
 Venue: American Political Science Review
 Year: 2024
@@ -15,4 +15,4 @@ Drawing on the America in One Room field experiment, this paper asks whether a w
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/paper.pdf

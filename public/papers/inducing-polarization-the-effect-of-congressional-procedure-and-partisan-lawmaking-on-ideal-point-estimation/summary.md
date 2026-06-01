@@ -1,7 +1,7 @@
 # Inducing Polarization? The Effect of Congressional Procedure and Partisan Lawmaking on Ideal Point Estimation
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Austin Bussing
 Venue: Journal of Political Institutions and Political Economy
 Year: 2022
@@ -15,4 +15,4 @@ The paper asks whether congressional procedure changes measured polarization by 
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/inducing-polarization-the-effect-of-congressional-procedure-and-partisan-lawmaking-on-ideal-point-estimation/paper.pdf

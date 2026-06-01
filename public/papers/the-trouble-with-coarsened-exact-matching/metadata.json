@@ -8,11 +8,11 @@
   "section": "workingPapers",
   "status": "under-review",
   "status_label": "Under review",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3694749",
   "summary": null,
   "metadata_url": "https://jyl19.github.io/papers/the-trouble-with-coarsened-exact-matching/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/the-trouble-with-coarsened-exact-matching/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/the-trouble-with-coarsened-exact-matching/paper.pdf"
 }

@@ -7,11 +7,11 @@
   "category": "institutions",
   "section": "peerReviewed",
   "status": "published",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": "10.1086/692736",
   "canonical_url": "https://doi.org/10.1086/692736",
   "summary": "House party leaders use leadership PAC donations to balance electoral strategy against ideological cohesion. Leaders in both parties reward candidates who help with winning seats and maintaining party unity, but majority leaders place relatively more emphasis on ideological homogeneity while minority leaders focus more heavily on seat gains and competitive races. Majority status therefore changes the strategic logic of intraparty giving rather than eliminating the trade-off.",
   "metadata_url": "https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/does-the-gift-keep-on-giving-house-leadership-pac-donations-before-and-after-majority-status/paper.pdf"
 }

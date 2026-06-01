@@ -1,7 +1,7 @@
 # Physicians with Multiple Paid Medical Malpractice Claims: Are They Outliers or Just Unlucky?
 
 Status: published
-Visibility: metadata-only
+Visibility: public-pdf
 Authors: with Bernard Black and David Hyman
 Venue: International Review of Law and Economics
 Year: 2019
@@ -15,4 +15,4 @@ Observed physician claim histories are compared here to a simulation-based null 
 ## Public Files
 
 - Metadata: https://jyl19.github.io/papers/physicians-with-multiple-paid-medical-malpractice-claims-are-they-outliers-or-just-unlucky/metadata.json
-- PDF: not yet staged for public release
+- PDF: https://jyl19.github.io/papers/physicians-with-multiple-paid-medical-malpractice-claims-are-they-outliers-or-just-unlucky/paper.pdf

@@ -8,11 +8,11 @@
   "section": "workingPapers",
   "status": "work-in-progress",
   "status_label": "Work in progress",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": null,
   "summary": null,
   "metadata_url": "https://jyl19.github.io/papers/a-bayesian-parametric-approach-to-measuring-legislative-productivity/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/a-bayesian-parametric-approach-to-measuring-legislative-productivity/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/a-bayesian-parametric-approach-to-measuring-legislative-productivity/paper.pdf"
 }

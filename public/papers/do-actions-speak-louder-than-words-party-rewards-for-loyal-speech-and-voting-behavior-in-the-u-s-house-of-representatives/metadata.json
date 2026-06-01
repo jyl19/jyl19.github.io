@@ -8,11 +8,11 @@
   "section": "workingPapers",
   "status": "working-paper",
   "status_label": "Working paper",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": null,
   "summary": null,
   "metadata_url": "https://jyl19.github.io/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/do-actions-speak-louder-than-words-party-rewards-for-loyal-speech-and-voting-behavior-in-the-u-s-house-of-representatives/paper.pdf"
 }
