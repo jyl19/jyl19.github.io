@@ -168,10 +168,10 @@ Works in progress are metadata-only by default.
 - Slug: the-political-science-of-james-q-wilson
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/metadata.json
 - Summary: https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: The New Atlantis
 
@@ -179,10 +179,10 @@ Works in progress are metadata-only by default.
 - Slug: spin-class-a-review-of-left-turn-by-timothy-groseclose
 - Status: published
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/metadata.json
 - Summary: https://jyl19.github.io/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Commentary
 
@@ -190,10 +190,10 @@ Works in progress are metadata-only by default.
 - Slug: setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings
 - Status: under-review
 - Category: institutions
-- Visibility: metadata-only
+- Visibility: public-pdf
 - Citation metadata: https://jyl19.github.io/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/metadata.json
 - Summary: https://jyl19.github.io/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/summary.md
-- Public PDF: not yet staged
+- Public PDF: https://jyl19.github.io/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/paper.pdf
 - Canonical source: not yet assigned
 - Descriptor: Conditional acceptance at Political Science Research and Methods
 

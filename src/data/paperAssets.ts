@@ -42,5 +42,11 @@ export const publicPaperPdfs: Record<string, string> = {
   "the-trouble-with-coarsened-exact-matching":
     "/papers/the-trouble-with-coarsened-exact-matching/paper.pdf",
   "using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies":
-    "/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/paper.pdf"
+    "/papers/using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies/paper.pdf",
+  "the-political-science-of-james-q-wilson":
+    "/papers/the-political-science-of-james-q-wilson/paper.pdf",
+  "spin-class-a-review-of-left-turn-by-timothy-groseclose":
+    "/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/paper.pdf",
+  "setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings":
+    "/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/paper.pdf",
 };

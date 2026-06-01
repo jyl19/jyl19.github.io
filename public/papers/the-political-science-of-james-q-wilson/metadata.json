@@ -7,11 +7,11 @@
   "category": "institutions",
   "section": "other",
   "status": "published",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": null,
   "summary": "An essay on James Q. Wilson's intellectual legacy and his place in political science.",
   "metadata_url": "https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/paper.pdf"
 }

@@ -249,13 +249,13 @@
       "category": "institutions",
       "section": "other",
       "status": "published",
-      "visibility": "metadata-only",
+      "visibility": "public-pdf",
       "doi": null,
       "canonical_url": null,
       "summary": "An essay on James Q. Wilson's intellectual legacy and his place in political science.",
       "metadata_url": "https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/metadata.json",
       "summary_url": "https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/summary.md",
-      "pdf_url": null
+      "pdf_url": "https://jyl19.github.io/papers/the-political-science-of-james-q-wilson/paper.pdf"
     },
     {
       "slug": "spin-class-a-review-of-left-turn-by-timothy-groseclose",
@@ -266,13 +266,13 @@
       "category": "institutions",
       "section": "other",
       "status": "published",
-      "visibility": "metadata-only",
+      "visibility": "public-pdf",
       "doi": null,
       "canonical_url": null,
       "summary": "A review essay on Timothy Groseclose's Left Turn and debates over media bias.",
       "metadata_url": "https://jyl19.github.io/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/metadata.json",
       "summary_url": "https://jyl19.github.io/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/summary.md",
-      "pdf_url": null
+      "pdf_url": "https://jyl19.github.io/papers/spin-class-a-review-of-left-turn-by-timothy-groseclose/paper.pdf"
     },
     {
       "slug": "setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings",
@@ -284,13 +284,13 @@
       "section": "workingPapers",
       "status": "under-review",
       "status_label": "Conditional acceptance at Political Science Research and Methods",
-      "visibility": "metadata-only",
+      "visibility": "public-pdf",
       "doi": null,
       "canonical_url": null,
       "summary": null,
       "metadata_url": "https://jyl19.github.io/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/metadata.json",
       "summary_url": "https://jyl19.github.io/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/summary.md",
-      "pdf_url": null
+      "pdf_url": "https://jyl19.github.io/papers/setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings/paper.pdf"
     },
     {
       "slug": "using-deep-and-active-learning-classifiers-to-identify-congressional-delegation-to-administrative-agencies",
