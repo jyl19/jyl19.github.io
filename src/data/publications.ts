@@ -1,7 +1,21 @@
 export type PublicationSection = "peerReviewed" | "other";
 export type PublicationCategory = "survey" | "evaluation" | "institutions" | "deliberation";
+export type PaperLifecycleStatus =
+  | "published"
+  | "under-review"
+  | "working-paper"
+  | "work-in-progress";
+export type PaperVisibility = "public-pdf" | "metadata-only" | "private";
 
-export type Publication = {
+type PaperCorpusFields = {
+  slug?: string;
+  paperStatus?: PaperLifecycleStatus;
+  visibility?: PaperVisibility;
+  pdfPath?: string;
+  metadataPath?: string;
+};
+
+export type Publication = PaperCorpusFields & {
   title: string;
   authors?: string;
   venue: string;
@@ -14,7 +28,7 @@ export type Publication = {
   abstract?: string;
 };
 
-export type WorkingPaper = {
+export type WorkingPaper = PaperCorpusFields & {
   title: string;
   authors?: string;
   status?: string;
@@ -22,6 +36,45 @@ export type WorkingPaper = {
   href?: string;
   note?: string;
 };
+
+export type PaperItem = Publication | WorkingPaper;
+
+export const paperCorpusBasePath = "/papers";
+
+export function getPaperSlug(item: PaperItem) {
+  if (item.slug) return item.slug;
+
+  return item.title
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export function getPaperMetadataPath(item: PaperItem) {
+  return item.metadataPath ?? `${paperCorpusBasePath}/${getPaperSlug(item)}/metadata.json`;
+}
+
+export function getPaperPdfPath(item: PaperItem) {
+  return item.visibility === "public-pdf" ? item.pdfPath : undefined;
+}
+
+export function getWorkingPaperStatus(status?: string): PaperLifecycleStatus {
+  const normalized = status?.toLowerCase() ?? "";
+
+  if (normalized.includes("work in progress")) return "work-in-progress";
+  if (
+    normalized.includes("under review") ||
+    normalized.includes("revise") ||
+    normalized.includes("conditional acceptance")
+  ) {
+    return "under-review";
+  }
+
+  return "working-paper";
+}
 
 export const publications: Publication[] = [
   {

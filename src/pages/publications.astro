@@ -1,6 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { publicationCategories, publications, workingPapers } from "../data/publications";
+import {
+  getPaperMetadataPath,
+  getPaperPdfPath,
+  publicationCategories,
+  publications,
+  workingPapers
+} from "../data/publications";
 import { site } from "../data/site";
 
 const groupedPublications = publicationCategories.map(([key, label]) => ({
@@ -10,6 +16,10 @@ const groupedPublications = publicationCategories.map(([key, label]) => ({
     .filter((item) => item.section === "peerReviewed" && item.category === key)
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
 }));
+
+const otherPublications = publications
+  .filter((item) => item.section === "other")
+  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
 const groupedWorkingPapers = publicationCategories
   .map(([key, label]) => ({
@@ -39,6 +49,7 @@ const groupedWorkingPapers = publicationCategories
       {groupedPublications.map((group) => (
         <a class="anchor-link" href={`#${group.key}`}>{group.label}</a>
       ))}
+      {otherPublications.length > 0 && <a class="anchor-link" href="#other-writing">Other Writing</a>}
       <a class="anchor-link" href="#working-papers">Working Papers</a>
     </div>
   </section>
@@ -53,17 +64,46 @@ const groupedWorkingPapers = publicationCategories
               <div class="pub-title"><strong>{item.title}</strong></div>
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
-              {item.href && (
-                <div class="pub-meta">
+              <div class="pub-meta">
+                {item.href && (
                   <a class="pub-link" href={item.href}>Read article</a>
-                </div>
-              )}
+                )}
+                {getPaperPdfPath(item) && (
+                  <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
+                )}
+                <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
+              </div>
             </article>
           ))}
         </div>
       </div>
     ))}
   </section>
+
+  {otherPublications.length > 0 && (
+    <section class="section-grid" id="other-writing">
+      <div class="panel span-12">
+        <div class="eyebrow">Essays and Reviews</div>
+        <h2>Other Writing</h2>
+        <div class="list">
+          {otherPublications.map((item) => (
+            <article class="pub">
+              <div class="pub-title"><strong>{item.title}</strong></div>
+              <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
+              {item.abstract && <p>{item.abstract}</p>}
+              <div class="pub-meta">
+                {item.href && <a class="pub-link" href={item.href}>Read article</a>}
+                {getPaperPdfPath(item) && (
+                  <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
+                )}
+                <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <section class="section-grid" id="working-papers">
     <div class="panel span-12">
@@ -88,6 +128,10 @@ const groupedWorkingPapers = publicationCategories
               <div class="pub-meta">
                 {item.status && <span class="status">{item.status}</span>}
                 {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
+                {getPaperPdfPath(item) && (
+                  <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
+                )}
+                <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
               </div>
               {item.note && <p>{item.note}.</p>}
             </article>

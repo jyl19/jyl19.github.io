@@ -1,0 +1,18 @@
+{
+  "slug": "evaluating-the-human-likeness-of-llm-generated-open-ended-responses",
+  "title": "Evaluating the Human-Likeness of LLM-Generated Open-Ended Responses",
+  "authors": "with Brandon Sepulvado, Lilian Huang, and Soubhik Barari",
+  "venue": null,
+  "year": null,
+  "category": "survey",
+  "section": "workingPapers",
+  "status": "working-paper",
+  "status_label": "NLPOR 2025 non-archival workshop paper",
+  "visibility": "metadata-only",
+  "doi": null,
+  "canonical_url": "https://openreview.net/forum?id=JPHiXxrLYn",
+  "summary": null,
+  "metadata_url": "https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/metadata.json",
+  "summary_url": "https://jyl19.github.io/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/summary.md",
+  "pdf_url": null
+}

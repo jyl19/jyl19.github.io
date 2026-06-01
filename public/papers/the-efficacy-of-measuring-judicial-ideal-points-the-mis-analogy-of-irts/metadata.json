@@ -1,0 +1,17 @@
+{
+  "slug": "the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts",
+  "title": "The Efficacy of Measuring Judicial Ideal Points: The Mis-Analogy of IRTs",
+  "authors": "with Mathew D. McCubbins and Kristen Renberg",
+  "venue": "International Review of Law and Economics",
+  "year": 2021,
+  "category": "institutions",
+  "section": "peerReviewed",
+  "status": "published",
+  "visibility": "metadata-only",
+  "doi": "10.1016/j.irle.2021.106020",
+  "canonical_url": "https://doi.org/10.1016/j.irle.2021.106020",
+  "summary": "Martin-Quinn-style judicial ideal points are revisited here by focusing on the item parameters that most applications ignore. A meaningful set of Supreme Court cases have discrimination parameters inconsistent with the assumptions of a unidimensional IRT model, and trimming or re-estimating around those cases yields more moderate justice scores and even changes the identity of the Court median in several terms. The broader point is that judicial ideal-point estimates are more fragile than users often assume, especially when they are treated as precise cardinal measures.",
+  "metadata_url": "https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/metadata.json",
+  "summary_url": "https://jyl19.github.io/papers/the-efficacy-of-measuring-judicial-ideal-points-the-mis-analogy-of-irts/summary.md",
+  "pdf_url": null
+}

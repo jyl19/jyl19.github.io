@@ -14,8 +14,18 @@ npm run build
 
 - `src/data/site.ts`: homepage bio, links, research themes
 - `src/data/publications.ts`: publication list
+- `public/llms.txt`: machine-readable paper corpus index
+- `public/papers/`: per-paper metadata and summaries for LLM-readable discovery
 - `public/files/lerner_cv_2026.pdf`: current CV PDF
 - optional future headshot in `public/`
+
+## Paper Corpus Workflow
+
+The canonical staging archive for paper versions is the local Dropbox folder
+`/Users/joshualerner/Dropbox/LLM-Legible Paper Corpus`. Each paper has a slugged
+folder with `metadata.yml`, `notes.md`, `versions/`, `approved-public/`, and
+`private/`. Only files explicitly placed in `approved-public/` should be copied
+into `public/papers/<paper-slug>/` and linked from the site.
 
 ## Deployment
 
