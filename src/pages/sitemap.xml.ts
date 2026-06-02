@@ -1,6 +1,7 @@
 import { site } from "../data/site";
+import { getPaperPagePath, getPaperPdfPath, paperItems } from "../data/publications";
 
-const routes = [
+const pageRoutes = [
   "/",
   "/research",
   "/publications",
@@ -9,6 +10,16 @@ const routes = [
   "/cv",
   "/contact"
 ];
+
+const scholarPaperRoutes = paperItems
+  .map((item) => getPaperPagePath(item))
+  .filter((route): route is string => Boolean(route));
+
+const pdfRoutes = paperItems
+  .map((item) => getPaperPdfPath(item))
+  .filter((route): route is string => Boolean(route));
+
+const routes = [...pageRoutes, ...scholarPaperRoutes, ...pdfRoutes];
 
 const updated = new Date().toISOString().slice(0, 10);
 
