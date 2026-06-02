@@ -8,6 +8,7 @@ import {
   paperItems,
   type PaperItem
 } from "../../data/publications";
+import { paperScholarMetadata } from "../../data/paperScholarMetadata";
 import { site } from "../../data/site";
 
 export function getStaticPaths() {
@@ -19,6 +20,7 @@ export function getStaticPaths() {
 
 const { item } = Astro.props as { item: PaperItem };
 const slug = getPaperSlug(item);
+const scholarMetadata = paperScholarMetadata[slug] ?? {};
 const pagePath = getPaperPagePath(item) ?? `/publications/${slug}/`;
 const pdfPath = getPaperPdfPath(item);
 const metadataPath = getPaperMetadataPath(item);
@@ -37,14 +39,17 @@ const venue = "venue" in item ? item.venue : undefined;
 const year = "year" in item ? item.year : undefined;
 const doi = "doi" in item ? item.doi : undefined;
 const externalHref = item.href;
-const abstract = item.fullAbstract ?? ("abstract" in item ? item.abstract : item.note) ?? "";
+const citationTitle = scholarMetadata.citationTitle ?? title;
+const abstract =
+  scholarMetadata.fullAbstract ?? item.fullAbstract ?? ("abstract" in item ? item.abstract : item.note) ?? "";
 const extraAuthors =
   item.authors
     ?.replace(/^with\s+/i, "")
     .split(/,\s+and\s+|\s+and\s+|,\s+/)
     .map((author) => author.trim())
     .filter(Boolean) ?? [];
-const citationAuthors = item.citationAuthors ?? ["Lerner, Joshua Y.", ...extraAuthors];
+const citationAuthors =
+  scholarMetadata.citationAuthors ?? item.citationAuthors ?? ["Lerner, Joshua Y.", ...extraAuthors];
 const displayAuthors = citationAuthors
   .map((author) => {
     const [family, given] = author.split(",").map((part) => part?.trim());
@@ -52,19 +57,29 @@ const displayAuthors = citationAuthors
   })
   .join(", ");
 const hasPdf = Boolean(pdfPath);
+const citationPublicationDate =
+  scholarMetadata.citationPublicationDate ?? item.citationPublicationDate ?? year;
+const citationJournalTitle =
+  scholarMetadata.citationJournalTitle ?? item.citationJournalTitle ?? venue;
+const citationDoi = scholarMetadata.citationDoi ?? doi;
 
 const citationMeta = [
-  { name: "citation_title", content: title },
+  { name: "citation_title", content: citationTitle },
   ...citationAuthors.map((author) => ({ name: "citation_author", content: author })),
-  { name: "citation_publication_date", content: item.citationPublicationDate ?? year },
+  { name: "citation_publication_date", content: citationPublicationDate },
   { name: "citation_pdf_url", content: pdfUrl },
   { name: "citation_abstract", content: abstract },
-  { name: "citation_journal_title", content: item.citationJournalTitle ?? venue },
-  { name: "citation_volume", content: item.citationVolume },
-  { name: "citation_issue", content: item.citationIssue },
-  { name: "citation_firstpage", content: item.citationFirstPage },
-  { name: "citation_lastpage", content: item.citationLastPage },
-  { name: "citation_doi", content: doi }
+  { name: "citation_journal_title", content: citationJournalTitle },
+  { name: "citation_volume", content: scholarMetadata.citationVolume ?? item.citationVolume },
+  { name: "citation_issue", content: scholarMetadata.citationIssue ?? item.citationIssue },
+  { name: "citation_firstpage", content: scholarMetadata.citationFirstPage ?? item.citationFirstPage },
+  { name: "citation_lastpage", content: scholarMetadata.citationLastPage ?? item.citationLastPage },
+  { name: "citation_doi", content: citationDoi },
+  {
+    name: "citation_technical_report_institution",
+    content: scholarMetadata.citationTechnicalReportInstitution
+  },
+  { name: "citation_technical_report_number", content: scholarMetadata.citationTechnicalReportNumber }
 ];
 ---
 
@@ -89,10 +104,16 @@ const citationMeta = [
           <dd>{year}</dd>
         </div>
       )}
-      {item.citationPublicationDate && (
+      {citationPublicationDate && citationPublicationDate !== year && (
         <div>
           <dt>Version Date</dt>
-          <dd>{item.citationPublicationDate}</dd>
+          <dd>{citationPublicationDate}</dd>
+        </div>
+      )}
+      {citationTitle !== title && (
+        <div>
+          <dt>PDF Title</dt>
+          <dd>{citationTitle}</dd>
         </div>
       )}
       {venue && (
@@ -117,7 +138,7 @@ const citationMeta = [
     </div>
 
     <section class="paper-section">
-      <h2>{item.fullAbstract ? "Abstract" : "Summary"}</h2>
+      <h2>{scholarMetadata.fullAbstract || item.fullAbstract ? "Abstract" : "Summary"}</h2>
       {abstract ? <p>{abstract}</p> : <p>No abstract is posted yet.</p>}
     </section>
 
