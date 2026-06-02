@@ -11,12 +11,10 @@ import {
 import { site } from "../../data/site";
 
 export function getStaticPaths() {
-  return paperItems
-    .filter((item) => item.scholarPage)
-    .map((item) => ({
-      params: { slug: getPaperSlug(item) },
-      props: { item }
-    }));
+  return paperItems.map((item) => ({
+    params: { slug: getPaperSlug(item) },
+    props: { item }
+  }));
 }
 
 const { item } = Astro.props as { item: PaperItem };
@@ -40,13 +38,20 @@ const year = "year" in item ? item.year : undefined;
 const doi = "doi" in item ? item.doi : undefined;
 const externalHref = item.href;
 const abstract = item.fullAbstract ?? ("abstract" in item ? item.abstract : item.note) ?? "";
-const citationAuthors = item.citationAuthors ?? ["Lerner, Joshua Y."];
+const extraAuthors =
+  item.authors
+    ?.replace(/^with\s+/i, "")
+    .split(/,\s+and\s+|\s+and\s+|,\s+/)
+    .map((author) => author.trim())
+    .filter(Boolean) ?? [];
+const citationAuthors = item.citationAuthors ?? ["Lerner, Joshua Y.", ...extraAuthors];
 const displayAuthors = citationAuthors
   .map((author) => {
     const [family, given] = author.split(",").map((part) => part?.trim());
     return given ? `${given} ${family}` : author;
   })
   .join(", ");
+const hasPdf = Boolean(pdfPath);
 
 const citationMeta = [
   { name: "citation_title", content: title },
@@ -112,8 +117,8 @@ const citationMeta = [
     </div>
 
     <section class="paper-section">
-      <h2>Abstract</h2>
-      <p>{abstract}</p>
+      <h2>{item.fullAbstract ? "Abstract" : "Summary"}</h2>
+      {abstract ? <p>{abstract}</p> : <p>No abstract is posted yet.</p>}
     </section>
 
     <section class="paper-section">
@@ -121,6 +126,7 @@ const citationMeta = [
       <ul class="paper-links">
         <li>Landing page: <a href={pagePath}>{pageUrl}</a></li>
         {pdfUrl && <li>PDF: <a href={pdfPath}>{pdfUrl}</a></li>}
+        {!hasPdf && <li>PDF: not posted</li>}
         <li>Metadata: <a href={metadataPath}>{metadataUrl}</a></li>
         {externalHref && <li>External record: <a href={externalHref}>{externalHref}</a></li>}
       </ul>
