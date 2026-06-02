@@ -15,6 +15,15 @@ type PaperCorpusFields = {
   visibility?: PaperVisibility;
   pdfPath?: string;
   metadataPath?: string;
+  scholarPage?: boolean;
+  fullAbstract?: string;
+  citationAuthors?: string[];
+  citationPublicationDate?: string;
+  citationJournalTitle?: string;
+  citationVolume?: string;
+  citationIssue?: string;
+  citationFirstPage?: string;
+  citationLastPage?: string;
 };
 
 export type Publication = PaperCorpusFields & {
@@ -59,6 +68,10 @@ export function getPaperMetadataPath(item: PaperItem) {
   return item.metadataPath ?? `${paperCorpusBasePath}/${getPaperSlug(item)}/metadata.json`;
 }
 
+export function getPaperPagePath(item: PaperItem) {
+  return item.scholarPage ? `/publications/${getPaperSlug(item)}/` : undefined;
+}
+
 export function getPaperPdfPath(item: PaperItem) {
   return item.pdfPath ?? publicPaperPdfs[getPaperSlug(item)];
 }
@@ -90,7 +103,16 @@ export const publications: Publication[] = [
     category: "institutions",
     featured: true,
     abstract:
-      "Legislative complexity is treated here as a latent trait measured through pairwise comparisons of bill text. Bradley-Terry models built from human judgments are compared to parallel models built from LLM judgments, showing that carefully guided prompts reproduce the main structure of human coding fairly well, while unguided comparisons perform much worse. The larger implication is that LLMs can help scale complexity measurement, but only when researchers provide strong anchors and clear comparison rules."
+      "Legislative complexity is treated here as a latent trait measured through pairwise comparisons of bill text. Bradley-Terry models built from human judgments are compared to parallel models built from LLM judgments, showing that carefully guided prompts reproduce the main structure of human coding fairly well, while unguided comparisons perform much worse. The larger implication is that LLMs can help scale complexity measurement, but only when researchers provide strong anchors and clear comparison rules.",
+    scholarPage: true,
+    fullAbstract:
+      "The complexity of legislative language is of theoretical importance to many substantive questions about legislative politics. However, most existing measures of bill complexity are either generated at the broad issue level and applied to individual bills, or they are reliant on a simple metric like length. In this paper, we apply a pairwise comparison framework to the measurement of complexity in legislative texts. We compare the results of a Bradley-Terry model fit on pairwise comparisons made by human coders with the results of the same model fit on comparisons made by large language models (LLMs). There is a moderately high level of agreement between human coders and the LLMs, and the relationships between observable text features and the underlying trait of complexity are similar in comparisons made by human coders and by the LLMs. Our work demonstrates that, with researcher-selected bridging texts and carefully designed prompts, LLMs can be used to measure complexity in legislative texts.",
+    citationAuthors: ["Bussing, Austin", "Howard, Nicholas O.", "Lerner, Joshua Y."],
+    citationPublicationDate: "2025",
+    citationJournalTitle: "Journal of Political Institutions and Political Economy",
+    citationVolume: "6",
+    citationFirstPage: "407",
+    citationLastPage: "426"
   },
   {
     title: "The Language of Delegation: An NLP Analysis of Congressional Bill Text",
@@ -347,7 +369,13 @@ export const workingPapers: WorkingPaper[] = [
   {
     title: "Parties and Agenda Setting: A Final Passage Approach to Ideal Point Estimation",
     status: "Working paper",
-    category: "institutions"
+    category: "institutions",
+    scholarPage: true,
+    fullAbstract:
+      "Canonical approaches to the study of ideal points in Congress are all built off of a theoretical Congress that treats casting a vote on any given roll call as an individualized independent action. Ignoring the structure of votes leads to the creation of measures that obstruct how parties structure votes in such a way to ensure the legislative outcomes they desire: positive and negative agenda control. Building off of a growing literature on the problems with existing measures of legislative preferences, I propose a more straightforward approach to ideal point estimation that privileges final passage votes over others and therefore takes seriously the use of agenda control by the majority party to shape outcomes. In doing so, I find the effects of party on individual roll calls conditional on the majority status of the MC, as well as significant discrepancies in how these votes impact our existing measurements of ideal points. I further introduce a series of tests from the psychometrics literature on the viability of latent traits to identify which of these measures are most consistent and generalizable. I find that partisan centric ideal points are more accordant with these tests than existing measures. With these final-passage generated ideal points, I find more evidence of MC success and failures consistent with theories of both positive and negative agenda control.",
+    citationAuthors: ["Lerner, Joshua Y."],
+    citationPublicationDate: "2023/05/10",
+    note: "Prepared for presentation at the 2020 Annual Meeting of the American Political Science Association"
   },
   {
     title: "Dividing the Question: Concurrences on the Supreme Court and Ideal Point Estimation",
@@ -405,3 +433,5 @@ export const publicationCategories = [
   ["institutions", "Political Institutions and Legislative Text"],
   ["deliberation", "Public Opinion and Deliberation"]
 ] as const;
+
+export const paperItems: PaperItem[] = [...publications, ...workingPapers];
