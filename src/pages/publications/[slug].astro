@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  getPaperMetadataPath,
+  getPaperPagePath,
+  getPaperPdfPath,
+  getPaperSlug,
+  paperItems,
+  type PaperItem
+} from "../../data/publications";
+import { site } from "../../data/site";
+
+export function getStaticPaths() {
+  return paperItems
+    .filter((item) => item.scholarPage)
+    .map((item) => ({
+      params: { slug: getPaperSlug(item) },
+      props: { item }
+    }));
+}
+
+const { item } = Astro.props as { item: PaperItem };
+const slug = getPaperSlug(item);
+const pagePath = getPaperPagePath(item) ?? `/publications/${slug}/`;
+const pdfPath = getPaperPdfPath(item);
+const metadataPath = getPaperMetadataPath(item);
+const pdfUrl = pdfPath ? new URL(pdfPath, site.url).toString() : undefined;
+const metadataUrl = new URL(metadataPath, site.url).toString();
+const pageUrl = new URL(pagePath, site.url).toString();
+
+const title = item.title;
+const status =
+  "status" in item && item.status
+    ? item.status
+    : item.paperStatus === "published" || ("year" in item && item.year)
+      ? "Published article"
+      : "Working paper";
+const venue = "venue" in item ? item.venue : undefined;
+const year = "year" in item ? item.year : undefined;
+const doi = "doi" in item ? item.doi : undefined;
+const externalHref = item.href;
+const abstract = item.fullAbstract ?? ("abstract" in item ? item.abstract : item.note) ?? "";
+const citationAuthors = item.citationAuthors ?? ["Lerner, Joshua Y."];
+const displayAuthors = citationAuthors
+  .map((author) => {
+    const [family, given] = author.split(",").map((part) => part?.trim());
+    return given ? `${given} ${family}` : author;
+  })
+  .join(", ");
+
+const citationMeta = [
+  { name: "citation_title", content: title },
+  ...citationAuthors.map((author) => ({ name: "citation_author", content: author })),
+  { name: "citation_publication_date", content: item.citationPublicationDate ?? year },
+  { name: "citation_pdf_url", content: pdfUrl },
+  { name: "citation_abstract", content: abstract },
+  { name: "citation_journal_title", content: item.citationJournalTitle ?? venue },
+  { name: "citation_volume", content: item.citationVolume },
+  { name: "citation_issue", content: item.citationIssue },
+  { name: "citation_firstpage", content: item.citationFirstPage },
+  { name: "citation_lastpage", content: item.citationLastPage },
+  { name: "citation_doi", content: doi }
+];
+---
+
+<BaseLayout
+  title={`${title} | ${site.name}`}
+  description={abstract || `${title} by ${displayAuthors}.`}
+  type="article"
+  headMeta={citationMeta}
+>
+  <article class="panel paper-detail">
+    <div class="eyebrow">Publication</div>
+    <h1>{title}</h1>
+    <p class="lede">{displayAuthors}</p>
+    <dl class="paper-facts">
+      <div>
+        <dt>Status</dt>
+        <dd>{status}</dd>
+      </div>
+      {year && (
+        <div>
+          <dt>Year</dt>
+          <dd>{year}</dd>
+        </div>
+      )}
+      {item.citationPublicationDate && (
+        <div>
+          <dt>Version Date</dt>
+          <dd>{item.citationPublicationDate}</dd>
+        </div>
+      )}
+      {venue && (
+        <div>
+          <dt>Venue</dt>
+          <dd>{venue}</dd>
+        </div>
+      )}
+      {doi && (
+        <div>
+          <dt>DOI</dt>
+          <dd>{doi}</dd>
+        </div>
+      )}
+    </dl>
+
+    <div class="pub-meta paper-actions">
+      {pdfPath && <a class="pub-link" href={pdfPath}>Download PDF</a>}
+      {externalHref && <a class="pub-link" href={externalHref}>External record</a>}
+      <a class="pub-link" href={metadataPath}>Machine-readable metadata</a>
+      <a class="pub-link" href="/publications/">All publications</a>
+    </div>
+
+    <section class="paper-section">
+      <h2>Abstract</h2>
+      <p>{abstract}</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>Citation and Files</h2>
+      <ul class="paper-links">
+        <li>Landing page: <a href={pagePath}>{pageUrl}</a></li>
+        {pdfUrl && <li>PDF: <a href={pdfPath}>{pdfUrl}</a></li>}
+        <li>Metadata: <a href={metadataPath}>{metadataUrl}</a></li>
+        {externalHref && <li>External record: <a href={externalHref}>{externalHref}</a></li>}
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
