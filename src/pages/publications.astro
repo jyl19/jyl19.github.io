@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import {
   getPaperMetadataPath,
+  getPaperPagePath,
   getPaperPdfPath,
   publicationCategories,
   publications,
@@ -65,6 +66,9 @@ const groupedWorkingPapers = publicationCategories
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
+                {getPaperPagePath(item) && (
+                  <a class="pub-link" href={getPaperPagePath(item)}>Paper page</a>
+                )}
                 {item.href && (
                   <a class="pub-link" href={item.href}>Read article</a>
                 )}
@@ -92,6 +96,9 @@ const groupedWorkingPapers = publicationCategories
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
+                {getPaperPagePath(item) && (
+                  <a class="pub-link" href={getPaperPagePath(item)}>Paper page</a>
+                )}
                 {item.href && <a class="pub-link" href={item.href}>Read article</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
@@ -127,6 +134,9 @@ const groupedWorkingPapers = publicationCategories
               {item.authors && <p>{item.authors}.</p>}
               <div class="pub-meta">
                 {item.status && <span class="status">{item.status}</span>}
+                {getPaperPagePath(item) && (
+                  <a class="pub-link" href={getPaperPagePath(item)}>Paper page</a>
+                )}
                 {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
