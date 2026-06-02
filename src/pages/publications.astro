@@ -4,6 +4,7 @@ import {
   getPaperMetadataPath,
   getPaperPagePath,
   getPaperPdfPath,
+  getPaperSlug,
   publicationCategories,
   publications,
   workingPapers
@@ -29,6 +30,8 @@ const groupedWorkingPapers = publicationCategories
     items: workingPapers.filter((item) => item.category === key)
   }))
   .filter((group) => group.items.length > 0);
+
+const getListingPaperPagePath = (item) => getPaperPagePath(item) ?? `/publications/${getPaperSlug(item)}/`;
 ---
 
 <BaseLayout
@@ -66,9 +69,7 @@ const groupedWorkingPapers = publicationCategories
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
-                {getPaperPagePath(item) && (
-                  <a class="pub-link" href={getPaperPagePath(item)}>Paper page</a>
-                )}
+                <a class="pub-link" href={getListingPaperPagePath(item)}>Paper page</a>
                 {item.href && (
                   <a class="pub-link" href={item.href}>Read article</a>
                 )}
@@ -96,9 +97,7 @@ const groupedWorkingPapers = publicationCategories
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
-                {getPaperPagePath(item) && (
-                  <a class="pub-link" href={getPaperPagePath(item)}>Paper page</a>
-                )}
+                <a class="pub-link" href={getListingPaperPagePath(item)}>Paper page</a>
                 {item.href && <a class="pub-link" href={item.href}>Read article</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
@@ -134,9 +133,7 @@ const groupedWorkingPapers = publicationCategories
               {item.authors && <p>{item.authors}.</p>}
               <div class="pub-meta">
                 {item.status && <span class="status">{item.status}</span>}
-                {getPaperPagePath(item) && (
-                  <a class="pub-link" href={getPaperPagePath(item)}>Paper page</a>
-                )}
+                <a class="pub-link" href={getListingPaperPagePath(item)}>Paper page</a>
                 {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
