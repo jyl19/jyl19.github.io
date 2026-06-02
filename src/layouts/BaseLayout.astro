@@ -7,13 +7,18 @@ interface Props {
   description?: string;
   image?: string;
   type?: "website" | "article";
+  headMeta?: Array<{
+    name: string;
+    content?: string | number | null;
+  }>;
 }
 
 const {
   title,
   description = site.summary,
   image = site.socialImage,
-  type = "website"
+  type = "website",
+  headMeta = []
 } = Astro.props;
 
 const pathname = Astro.url.pathname || "/";
@@ -54,6 +59,11 @@ const isCurrentPath = (href: string) => normalizedPath === href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={shareImage} />
     <meta name="twitter:image:alt" content={site.socialImageAlt} />
+    {headMeta
+      .filter((meta) => meta.content !== undefined && meta.content !== null && `${meta.content}` !== "")
+      .map((meta) => (
+        <meta name={meta.name} content={`${meta.content}`} />
+      ))}
     <title>{title}</title>
   </head>
   <body>
