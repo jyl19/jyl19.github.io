@@ -3,6 +3,7 @@ import {
   getPaperPdfPath,
   getPaperSlug,
   getWorkingPaperStatus,
+  paperCorpusBasePath,
   paperItems,
   type PaperItem
 } from "../data/publications";
@@ -33,6 +34,7 @@ const getPaperCanonicalSource = (item: PaperItem) => {
 
 const renderPaper = (item: PaperItem) => {
   const slug = getPaperSlug(item);
+  const paperPagePath = `${paperCorpusBasePath}/${slug}/`;
   const pdfPath = getPaperPdfPath(item);
   const metadataPath = getPaperMetadataPath(item);
   const summaryPath = metadataPath.replace(/metadata\.json$/, "summary.md");
@@ -40,7 +42,7 @@ const renderPaper = (item: PaperItem) => {
   return [
     `### ${item.title}`,
     `- Slug: ${slug}`,
-    `- Landing page: ${absoluteUrl(`/publications/${slug}/`)}`,
+    `- Landing page: ${absoluteUrl(paperPagePath)}`,
     `- Status: ${getPaperStatus(item)}`,
     `- Category: ${getPaperCategory(item)}`,
     `- Visibility: ${getPaperVisibility(item)}`,

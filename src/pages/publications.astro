@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import {
   getPaperMetadataPath,
-  getPaperPagePath,
   getPaperPdfPath,
   getPaperSlug,
+  paperCorpusBasePath,
   publicationCategories,
   publications,
   workingPapers
@@ -31,7 +31,7 @@ const groupedWorkingPapers = publicationCategories
   }))
   .filter((group) => group.items.length > 0);
 
-const getListingPaperPagePath = (item) => getPaperPagePath(item) ?? `/publications/${getPaperSlug(item)}/`;
+const getPaperHtmlPagePath = (item) => `${paperCorpusBasePath}/${getPaperSlug(item)}/`;
 ---
 
 <BaseLayout
@@ -65,11 +65,12 @@ const getListingPaperPagePath = (item) => getPaperPagePath(item) ?? `/publicatio
         <div class="list">
           {group.items.map((item) => (
             <article class="pub">
-              <div class="pub-title"><strong>{item.title}</strong></div>
+              <div class="pub-title">
+                <a href={getPaperHtmlPagePath(item)}><strong>{item.title}</strong></a>
+              </div>
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
-                <a class="pub-link" href={getListingPaperPagePath(item)}>Paper page</a>
                 {item.href && (
                   <a class="pub-link" href={item.href}>Read article</a>
                 )}
@@ -93,11 +94,12 @@ const getListingPaperPagePath = (item) => getPaperPagePath(item) ?? `/publicatio
         <div class="list">
           {otherPublications.map((item) => (
             <article class="pub">
-              <div class="pub-title"><strong>{item.title}</strong></div>
+              <div class="pub-title">
+                <a href={getPaperHtmlPagePath(item)}><strong>{item.title}</strong></a>
+              </div>
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
-                <a class="pub-link" href={getListingPaperPagePath(item)}>Paper page</a>
                 {item.href && <a class="pub-link" href={item.href}>Read article</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
@@ -129,11 +131,12 @@ const getListingPaperPagePath = (item) => getPaperPagePath(item) ?? `/publicatio
         <div class="list">
           {group.items.map((item) => (
             <article class="pub">
-              <div class="pub-title"><strong>{item.title}</strong></div>
+              <div class="pub-title">
+                <a href={getPaperHtmlPagePath(item)}><strong>{item.title}</strong></a>
+              </div>
               {item.authors && <p>{item.authors}.</p>}
               <div class="pub-meta">
                 {item.status && <span class="status">{item.status}</span>}
-                <a class="pub-link" href={getListingPaperPagePath(item)}>Paper page</a>
                 {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>

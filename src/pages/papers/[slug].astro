@@ -2,7 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   getPaperMetadataPath,
-  getPaperPagePath,
   getPaperPdfPath,
   getPaperSlug,
   paperCorpusBasePath,
@@ -21,15 +20,16 @@ export function getStaticPaths() {
 
 const { item } = Astro.props as { item: PaperItem };
 const slug = getPaperSlug(item);
+const getPaperHtmlPagePath = () => `${paperCorpusBasePath}/${slug}/`;
 const scholarMetadata = paperScholarMetadata[slug] ?? {};
-const pagePath = `${paperCorpusBasePath}/${slug}/`;
-const legacyPagePath = getPaperPagePath(item) ?? `/publications/${slug}/`;
+const pagePath = getPaperHtmlPagePath();
 const pdfPath = getPaperPdfPath(item);
 const metadataPath = getPaperMetadataPath(item);
+const summaryPath = metadataPath.replace(/metadata\.json$/, "summary.md");
 const pdfUrl = pdfPath ? new URL(pdfPath, site.url).toString() : undefined;
 const metadataUrl = new URL(metadataPath, site.url).toString();
+const summaryUrl = new URL(summaryPath, site.url).toString();
 const pageUrl = new URL(pagePath, site.url).toString();
-const canonicalUrl = pageUrl;
 
 const title = item.title;
 const status =
@@ -41,7 +41,7 @@ const status =
 const venue = "venue" in item ? item.venue : undefined;
 const year = "year" in item ? item.year : undefined;
 const doi = "doi" in item ? item.doi : undefined;
-const externalHref = item.href;
+const externalHref = item.href ?? (doi ? `https://doi.org/${doi}` : undefined);
 const citationTitle = scholarMetadata.citationTitle ?? title;
 const abstract =
   scholarMetadata.fullAbstract ?? item.fullAbstract ?? ("abstract" in item ? item.abstract : item.note) ?? "";
@@ -59,7 +59,6 @@ const displayAuthors = citationAuthors
     return given ? `${given} ${family}` : author;
   })
   .join(", ");
-const hasPdf = Boolean(pdfPath);
 const citationPublicationDate =
   scholarMetadata.citationPublicationDate ?? item.citationPublicationDate ?? year;
 const citationJournalTitle =
@@ -71,13 +70,13 @@ const citationMeta = [
   ...citationAuthors.map((author) => ({ name: "citation_author", content: author })),
   { name: "citation_publication_date", content: citationPublicationDate },
   { name: "citation_pdf_url", content: pdfUrl },
-  { name: "citation_abstract", content: abstract },
+  { name: "citation_doi", content: citationDoi },
   { name: "citation_journal_title", content: citationJournalTitle },
   { name: "citation_volume", content: scholarMetadata.citationVolume ?? item.citationVolume },
   { name: "citation_issue", content: scholarMetadata.citationIssue ?? item.citationIssue },
   { name: "citation_firstpage", content: scholarMetadata.citationFirstPage ?? item.citationFirstPage },
   { name: "citation_lastpage", content: scholarMetadata.citationLastPage ?? item.citationLastPage },
-  { name: "citation_doi", content: citationDoi },
+  { name: "citation_abstract", content: abstract },
   {
     name: "citation_technical_report_institution",
     content: scholarMetadata.citationTechnicalReportInstitution
@@ -90,11 +89,10 @@ const citationMeta = [
   title={`${title} | ${site.name}`}
   description={abstract || `${title} by ${displayAuthors}.`}
   type="article"
-  canonicalUrl={canonicalUrl}
   headMeta={citationMeta}
 >
   <article class="panel paper-detail">
-    <div class="eyebrow">Publication</div>
+    <div class="eyebrow">Paper</div>
     <h1>{title}</h1>
     <p class="lede">{displayAuthors}</p>
     <dl class="paper-facts">
@@ -136,25 +134,27 @@ const citationMeta = [
 
     <div class="pub-meta paper-actions">
       {pdfPath && <a class="pub-link" href={pdfPath}>Download PDF</a>}
-      {externalHref && <a class="pub-link" href={externalHref}>External record</a>}
+      {externalHref && <a class="pub-link" href={externalHref}>Canonical record</a>}
       <a class="pub-link" href={metadataPath}>Machine-readable metadata</a>
+      <a class="pub-link" href={summaryPath}>Summary file</a>
       <a class="pub-link" href="/publications/">All publications</a>
     </div>
 
     <section class="paper-section">
       <h2>{scholarMetadata.fullAbstract || item.fullAbstract ? "Abstract" : "Summary"}</h2>
-      {abstract ? <p>{abstract}</p> : <p>No abstract is posted yet.</p>}
+      {abstract ? <p>{abstract}</p> : <p>No abstract or summary is posted yet.</p>}
     </section>
 
     <section class="paper-section">
       <h2>Citation and Files</h2>
       <ul class="paper-links">
         <li>Landing page: <a href={pagePath}>{pageUrl}</a></li>
-        <li>Legacy publication page: <a href={legacyPagePath}>{new URL(legacyPagePath, site.url).toString()}</a></li>
         {pdfUrl && <li>PDF: <a href={pdfPath}>{pdfUrl}</a></li>}
-        {!hasPdf && <li>PDF: not posted</li>}
-        <li>Metadata: <a href={metadataPath}>{metadataUrl}</a></li>
-        {externalHref && <li>External record: <a href={externalHref}>{externalHref}</a></li>}
+        {!pdfUrl && <li>PDF: not posted</li>}
+        {doi && <li>DOI: <a href={`https://doi.org/${doi}`}>{doi}</a></li>}
+        {externalHref && <li>Canonical record: <a href={externalHref}>{externalHref}</a></li>}
+        <li>Metadata JSON: <a href={metadataPath}>{metadataUrl}</a></li>
+        <li>Summary: <a href={summaryPath}>{summaryUrl}</a></li>
       </ul>
     </section>
   </article>

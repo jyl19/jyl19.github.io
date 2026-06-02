@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   image?: string;
   type?: "website" | "article";
+  canonicalUrl?: string;
   headMeta?: Array<{
     name: string;
     content?: string | number | null;
@@ -18,12 +19,14 @@ const {
   description = site.summary,
   image = site.socialImage,
   type = "website",
+  canonicalUrl: canonicalUrlOverride,
   headMeta = []
 } = Astro.props;
 
 const pathname = Astro.url.pathname || "/";
 const normalizedPath = pathname.replace(/\/+$/, "") || "/";
-const canonicalUrl = new URL(normalizedPath, Astro.site ?? site.url).toString();
+const canonicalUrl =
+  canonicalUrlOverride ?? new URL(normalizedPath, Astro.site ?? site.url).toString();
 const shareImage = new URL(image, Astro.site ?? site.url).toString();
 
 const navItems = [

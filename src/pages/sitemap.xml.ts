@@ -1,5 +1,5 @@
 import { site } from "../data/site";
-import { getPaperPagePath, getPaperPdfPath, getPaperSlug, paperItems } from "../data/publications";
+import { getPaperPdfPath, getPaperSlug, paperCorpusBasePath, paperItems } from "../data/publications";
 
 const pageRoutes = [
   "/",
@@ -12,7 +12,7 @@ const pageRoutes = [
 ];
 
 const scholarPaperRoutes = paperItems
-  .map((item) => getPaperPagePath(item) ?? `/publications/${getPaperSlug(item)}/`)
+  .map((item) => `${paperCorpusBasePath}/${getPaperSlug(item)}/`)
   .filter((route): route is string => Boolean(route));
 
 const pdfRoutes = paperItems
