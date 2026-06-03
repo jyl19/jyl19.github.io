@@ -34,14 +34,15 @@ export const site = {
   url: "https://jyl19.github.io",
   socialImage: "/images/social-card.png",
   socialImageAlt: "Joshua Y. Lerner name and research focus preview card",
-  hero: "Research methodologist studying how surveys, texts, and institutions become evidence.",
+  hero: "Research methodologist studying surveys, text, institutions, and public opinion.",
   intro:
-    "I work where the raw material is interpretable before it is analyzable: open-ended survey answers, legislative text, administrative records, deliberative discussion, and institutional performance.",
+    "I study survey responses, legislative text, administrative records, deliberative discussion, and institutional performance, with a focus on what each source can and cannot support.",
   summary:
-    "Start with a few flagship projects, then use the publications, talks, code, and CV for the full record.",
+    "My work sits between survey methodology, political science, and applied evaluation.",
   bio: [
-    "Across these projects I care about the step between a substantive concept and the variable that stands in for it. That step is where much of the argument happens.",
-    "At NORC, the work often centers on survey methods: open-ended response coding, response-quality assessment, questionnaire design, synthetic respondents, and when AI systems are useful enough to trust. In political science, it has centered on Congress, delegation, state capacity, deliberation, and public opinion.",
+    "At NORC, I work on response quality, questionnaire design, nonresponse, open-ended coding, and practical evaluations of AI tools for survey research.",
+    "My political science work studies Congress, delegation, state capacity, deliberation, public opinion, and the use of text as evidence about institutions.",
+    "The common thread is measurement: how to turn imperfect records into claims that can survive careful scrutiny.",
     "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology. I received my PhD in Political Science from Duke University and previously held positions at Duke and Northwestern University Pritzker School of Law."
   ],
   links: [
