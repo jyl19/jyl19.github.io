@@ -1,71 +1,94 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { talks } from "../data/professional";
-import { getPaperSlug, paperCorpusBasePath, publications } from "../data/publications";
 import { site } from "../data/site";
 
-const featured = publications
-  .filter((item) => item.featured)
-  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
-  .slice(0, 5);
+const directoryItems = [
+  {
+    number: "01",
+    title: "Research",
+    href: "/research",
+    body: "The questions and methods that connect the work."
+  },
+  {
+    number: "02",
+    title: "Publications",
+    href: "/publications",
+    body: "Published articles, working papers, PDFs, abstracts, and metadata."
+  },
+  {
+    number: "03",
+    title: "Talks and Teaching",
+    href: "/talks",
+    body: "Conference presentations, webinars, short courses, and teaching."
+  },
+  {
+    number: "04",
+    title: "Code",
+    href: "/code",
+    body: "Project repositories and replication materials."
+  },
+  {
+    number: "05",
+    title: "CV",
+    href: "/cv",
+    body: "Current CV and professional background."
+  },
+  {
+    number: "06",
+    title: "Contact",
+    href: "/contact",
+    body: "Email, profiles, and collaboration inquiries."
+  }
+];
 
-const featuredTalks = talks
-  .sort(
-    (a, b) =>
-      b.year - a.year ||
-      Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
-      a.title.localeCompare(b.title)
-  )
-  .slice(0, 4);
-
-const getPaperPath = (item) => `${paperCorpusBasePath}/${getPaperSlug(item)}/`;
+const externalProfiles = site.links.filter((link) =>
+  ["NORC Profile", "Google Scholar", "GitHub", "LinkedIn"].includes(link.label)
+);
 ---
 
 <BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
-  <section class="hero">
-    <div class="hero-heading">
-      <div>
-        <div class="eyebrow">{site.title}</div>
-        <h1>{site.name}</h1>
+  <section class="hero home-hero">
+    <div class="hero-copy">
+      <div class="eyebrow">{site.title}</div>
+      <h1>{site.name}</h1>
+      <p class="lede">{site.hero}</p>
+      <p>{site.intro}</p>
+      <div class="cta-row">
+        <a class="button primary" href="/publications">Publications</a>
+        <a class="button" href="/research">Research</a>
+        <a class="button" href="/cv">CV</a>
       </div>
+    </div>
+    <figure class="hero-portrait">
       <img
-        class="hero-badge"
-        src="/images/joshua-lerner-headshot-square.jpg"
+        src="/images/joshua-lerner-portrait-home.jpg"
         alt="Joshua Y. Lerner headshot"
-        width="5308"
-        height="5308"
+        width="750"
+        height="1000"
       />
-    </div>
-    <p class="lede">{site.hero}</p>
-    <p>{site.intro}</p>
-    <p>
-      For more on my applied work at NORC, see my
-      <a href="https://www.norc.org/about/experts/joshua-lerner.html"> NORC experts page</a>.
-    </p>
-    <div class="cta-row">
-      <a class="button primary" href="/publications">View Publications</a>
-      <a class="button" href="/cv">Download CV</a>
-      <a class="button" href="https://www.norc.org/about/experts/joshua-lerner.html">NORC Profile</a>
-    </div>
+      <figcaption>Survey methods, political institutions, public opinion</figcaption>
+    </figure>
   </section>
 
-  <section class="section-grid">
-    <div class="panel span-12">
-      <h2>Signature Projects</h2>
-      <p>
-        Start here for the projects that best show the range of the work: survey measurement,
-        deliberation, legislative text, and state capacity.
-      </p>
-      <div class="section-grid">
-        {site.signatureProjects.map((item) => (
-          <article class="span-6 theme-card">
-            <div>
-              <h3>{item.href ? <a href={item.href}>{item.title}</a> : item.title}</h3>
-              <p>{item.body}</p>
-            </div>
-          </article>
-        ))}
+  <section class="home-directory" aria-labelledby="directory-heading">
+    <div class="section-heading">
+      <div>
+        <div class="eyebrow">Site Map</div>
+        <h2 id="directory-heading">Find the right page</h2>
       </div>
+      <p>
+        Use these paths for papers, research themes, talks, code, background, and contact
+        information.
+      </p>
+    </div>
+    <div class="directory-grid">
+      {directoryItems.map((item) => (
+        <a class="directory-card" href={item.href}>
+          <span class="directory-number">{item.number}</span>
+          <span class="directory-title">{item.title}</span>
+          <span>{item.body}</span>
+        </a>
+      ))}
     </div>
   </section>
 
@@ -76,43 +99,10 @@ const getPaperPath = (item) => `${paperCorpusBasePath}/${getPaperSlug(item)}/`;
       {site.bio.map((paragraph) => <p>{paragraph}</p>)}
     </div>
     <div class="panel span-4">
-      <h2>Quick Links</h2>
+      <h2>External Profiles</h2>
       <div class="list">
-        {site.links.map((link) => (
+        {externalProfiles.map((link) => (
           <a href={link.href}>{link.label}</a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section-grid">
-    <div class="panel span-8">
-      <h2>Selected Publications</h2>
-      <div class="list">
-        {featured.map((item) => (
-          <article class="pub">
-            <div class="pub-title">
-              <a href={getPaperPath(item)}><strong>{item.title}</strong></a>
-            </div>
-            <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
-            {item.href && (
-              <div class="pub-meta">
-                <a class="pub-link" href={item.href}>Read article</a>
-              </div>
-            )}
-          </article>
-        ))}
-      </div>
-    </div>
-
-    <div class="panel span-4">
-      <h2>Recent Talks</h2>
-      <div class="compact-list">
-        {featuredTalks.map((talk) => (
-          <div class="compact-item">
-            <div class="pub-title"><strong>{talk.title}</strong></div>
-            <p>{talk.venue}, {talk.year}.</p>
-          </div>
         ))}
       </div>
     </div>

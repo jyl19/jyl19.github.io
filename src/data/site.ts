@@ -58,30 +58,4 @@ export const site = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/josh-lerner-26272922/" }
   ],
   themes,
-  signatureProjects: [
-    {
-      title: "Synthetic respondents and survey measurement",
-      href: "/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/",
-      body:
-        "Work with NORC colleagues on when LLM-generated open-ended survey answers look human, where they fail, and how probability-based panels should anchor the comparison."
-    },
-    {
-      title: "America in One Room and scalable deliberation",
-      href: "/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/",
-      body:
-        "Papers with James Fishkin, Alice Siu, Valentin Bolotnyy, Norman Bradburn, and others on whether structured discussion changes knowledge, voting, and political attention."
-    },
-    {
-      title: "Delegation in congressional bill text",
-      href: "/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/",
-      body:
-        "Active-learning classifiers for identifying delegating language across bill sections, built to study how ideology, party, and agency characteristics shape lawmaking."
-    },
-    {
-      title: "State capacity and policy response",
-      href: "/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/",
-      body:
-        "A subnational state-capacity measure used to study COVID-19 response, vaccine rollout, and the conditions under which policy tools actually work."
-    }
-  ],
 };
