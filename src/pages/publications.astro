@@ -5,7 +5,6 @@ import {
   getPaperPdfPath,
   getPaperSlug,
   paperCorpusBasePath,
-  publicationCategories,
   publications,
   workingPapers,
   type PaperItem
@@ -13,37 +12,18 @@ import {
 import { paperScholarMetadata } from "../data/paperScholarMetadata";
 import { site } from "../data/site";
 
-const groupedPublications = publicationCategories.map(([key, label]) => ({
-  key,
-  label,
-  items: publications
-    .filter((item) => item.section === "peerReviewed" && item.category === key)
-    .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
-}));
+const publishedArticles = publications
+  .filter((item) => item.section === "peerReviewed")
+  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
 const otherPublications = publications
   .filter((item) => item.section === "other")
   .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
-const groupedWorkingPapers = publicationCategories
-  .map(([key, label]) => ({
-    key: `${key}-working`,
-    label,
-    items: workingPapers.filter((item) => item.category === key)
-  }))
-  .filter((group) => group.items.length > 0);
-
 const allPaperItems = [...publications, ...workingPapers];
 const publishedCount = publications.filter((item) => item.section === "peerReviewed").length;
 const workingPaperCount = workingPapers.length;
 const pdfCount = allPaperItems.filter((item) => Boolean(getPaperPdfPath(item))).length;
-
-const topicSummaries = publicationCategories.map(([key, label]) => ({
-  key,
-  label,
-  published: publications.filter((item) => item.section === "peerReviewed" && item.category === key).length,
-  working: workingPapers.filter((item) => item.category === key).length
-}));
 
 const getPaperHtmlPagePath = (item: PaperItem) => `${paperCorpusBasePath}/${getPaperSlug(item)}/`;
 const getPublicationAbstract = (item: PaperItem) =>
@@ -60,75 +40,82 @@ const getPublicationAbstract = (item: PaperItem) =>
     <div class="eyebrow">Publications</div>
     <h1>Publications</h1>
     <p class="lede section-intro">Papers, abstracts, PDFs, DOI links, and metadata.</p>
-    <div class="stat-grid">
-      <div>
-        <strong>{publishedCount}</strong>
-        <span>Published articles</span>
-      </div>
-      <div>
-        <strong>{workingPaperCount}</strong>
-        <span>Working papers and projects</span>
-      </div>
-      <div>
-        <strong>{pdfCount}</strong>
-        <span>Public PDFs</span>
-      </div>
-    </div>
     <div class="anchor-row">
-      {groupedPublications.map((group) => (
-        <a class="anchor-link" href={`#${group.key}`}>{group.label}</a>
-      ))}
+      <a class="anchor-link" href="#published-articles">{publishedCount} Published Articles</a>
+      <a class="anchor-link" href="#working-papers">{workingPaperCount} Working Papers and Projects</a>
       {otherPublications.length > 0 && (
-        <a class="anchor-link" href="#other-writing">Other Writing and Conference Papers</a>
+        <a class="anchor-link" href="#other-writing">Other Writing</a>
       )}
-      <a class="anchor-link" href="#working-papers">Working Papers</a>
+      <span class="anchor-note">{pdfCount} public PDFs</span>
     </div>
   </section>
 
-  <section class="topic-grid">
-    {topicSummaries.map((topic) => (
-      <a class="topic-card" href={`#${topic.key}`}>
-        <span>{topic.label}</span>
-        <small>{topic.published} published · {topic.working} current</small>
-      </a>
-    ))}
+  <section class="section-grid" id="published-articles">
+    <div class="panel span-12 publication-section">
+      <div class="section-heading compact-heading">
+        <h2>Published Articles</h2>
+        <span class="status">{publishedArticles.length} published</span>
+      </div>
+      <div class="list">
+        {publishedArticles.map((item) => (
+          <article class="pub pub-compact">
+            <div class="pub-head">
+              <div>
+                <h3 class="pub-title">
+                  <a href={getPaperHtmlPagePath(item)}>{item.title}</a>
+                </h3>
+                <p class="pub-citation">{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
+              </div>
+              <span class="status">{item.year}</span>
+            </div>
+            {getPublicationAbstract(item) && <p class="pub-abstract">{getPublicationAbstract(item)}</p>}
+            <div class="pub-meta">
+              <a class="pub-link" href={getPaperHtmlPagePath(item)}>Paper page</a>
+              {item.href && (
+                <a class="pub-link" href={item.href}>Read article</a>
+              )}
+              {getPaperPdfPath(item) && (
+                <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
+              )}
+              <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
   </section>
 
-  <section class="section-grid stack-lg">
-    {groupedPublications.map((group) => (
-      <div class="panel span-12 publication-section" id={group.key}>
-        <div class="section-heading compact-heading">
-          <h2>{group.label}</h2>
-          <span class="status">{group.items.length} published</span>
-        </div>
-        <div class="list">
-          {group.items.map((item) => (
-            <article class="pub pub-compact">
-              <div class="pub-head">
-                <div>
-                  <h3 class="pub-title">
-                    <a href={getPaperHtmlPagePath(item)}>{item.title}</a>
-                  </h3>
-                  <p class="pub-citation">{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
-                </div>
-                <span class="status">{item.year}</span>
-              </div>
-              {getPublicationAbstract(item) && <p class="pub-abstract">{getPublicationAbstract(item)}</p>}
-              <div class="pub-meta">
-                <a class="pub-link" href={getPaperHtmlPagePath(item)}>Paper page</a>
-                {item.href && (
-                  <a class="pub-link" href={item.href}>Read article</a>
-                )}
-                {getPaperPdfPath(item) && (
-                  <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
-                )}
-                <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
-              </div>
-            </article>
-          ))}
-        </div>
+  <section class="section-grid" id="working-papers">
+    <div class="panel span-12 publication-section">
+      <div class="section-heading compact-heading">
+        <h2>Working Papers and Projects</h2>
+        <span class="status">{workingPapers.length} current</span>
       </div>
-    ))}
+      <div class="list">
+        {workingPapers.map((item) => (
+          <article class="pub pub-compact">
+            <div class="pub-head">
+              <div>
+                <h3 class="pub-title">
+                  <a href={getPaperHtmlPagePath(item)}>{item.title}</a>
+                </h3>
+                {item.authors && <p class="pub-citation">{item.authors}.</p>}
+              </div>
+              {item.status && <span class="status">{item.status}</span>}
+            </div>
+            <div class="pub-meta">
+              <a class="pub-link" href={getPaperHtmlPagePath(item)}>Paper page</a>
+              {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
+              {getPaperPdfPath(item) && (
+                <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
+              )}
+              <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
+            </div>
+            {item.note && <p>{item.note}.</p>}
+          </article>
+        ))}
+      </div>
+    </div>
   </section>
 
   {otherPublications.length > 0 && (
@@ -164,46 +151,4 @@ const getPublicationAbstract = (item: PaperItem) =>
       </div>
     </section>
   )}
-
-  <section class="section-grid" id="working-papers">
-    <div class="panel span-12">
-      <div class="eyebrow">Current Work</div>
-      <h2>Working Papers and Projects</h2>
-    </div>
-  </section>
-
-  <section class="section-grid stack-lg">
-    {groupedWorkingPapers.map((group) => (
-      <div class="panel span-12 publication-section" id={group.key}>
-        <div class="section-heading compact-heading">
-          <h2>{group.label}</h2>
-          <span class="status">{group.items.length} current</span>
-        </div>
-        <div class="list">
-          {group.items.map((item) => (
-            <article class="pub pub-compact">
-              <div class="pub-head">
-                <div>
-                  <h3 class="pub-title">
-                    <a href={getPaperHtmlPagePath(item)}>{item.title}</a>
-                  </h3>
-                  {item.authors && <p class="pub-citation">{item.authors}.</p>}
-                </div>
-                {item.status && <span class="status">{item.status}</span>}
-              </div>
-              <div class="pub-meta">
-                <a class="pub-link" href={getPaperHtmlPagePath(item)}>Paper page</a>
-                {item.href && <a class="pub-link" href={item.href}>Read paper</a>}
-                {getPaperPdfPath(item) && (
-                  <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
-                )}
-                <a class="pub-link" href={getPaperMetadataPath(item)}>Metadata</a>
-              </div>
-              {item.note && <p>{item.note}.</p>}
-            </article>
-          ))}
-        </div>
-      </div>
-    ))}
-  </section>
 </BaseLayout>
