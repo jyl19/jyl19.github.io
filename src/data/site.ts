@@ -34,17 +34,11 @@ export const site = {
   url: "https://jyl19.github.io",
   socialImage: "/images/social-card.png",
   socialImageAlt: "Joshua Y. Lerner name and research focus preview card",
-  hero: "Research methodologist studying surveys, text, institutions, and public opinion.",
+  hero: "Survey methods, text, institutions, public opinion.",
   intro:
-    "I study survey responses, legislative text, administrative records, deliberative discussion, and institutional performance, with a focus on what each source can and cannot support.",
+    "I study how imperfect records become evidence: survey responses, legislative text, administrative data, deliberation, and institutional performance.",
   summary:
-    "My work sits between survey methodology, political science, and applied evaluation.",
-  bio: [
-    "At NORC, I work on response quality, questionnaire design, nonresponse, open-ended coding, and practical evaluations of AI tools for survey research.",
-    "My political science work studies Congress, delegation, state capacity, deliberation, public opinion, and the use of text as evidence about institutions.",
-    "The common thread is measurement: how to turn imperfect records into claims that can survive careful scrutiny.",
-    "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology. I received my PhD in Political Science from Duke University and previously held positions at Duke and Northwestern University Pritzker School of Law."
-  ],
+    "Research at the intersection of survey methodology, political science, and applied evaluation.",
   links: [
     { label: "Publications", href: "/publications" },
     { label: "Code", href: "/code" },

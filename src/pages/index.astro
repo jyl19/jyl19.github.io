@@ -2,37 +2,41 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site";
 
-const directoryItems = [
+const resourceLinks = [
   {
-    number: "01",
     title: "Publications",
     href: "/publications",
-    body: "Published articles, working papers, PDFs, abstracts, and metadata."
+    body: "Papers, PDFs, abstracts, and metadata."
   },
   {
-    number: "02",
-    title: "Talks and Teaching",
+    title: "Talks",
     href: "/talks",
-    body: "Conference presentations, webinars, short courses, and teaching."
+    body: "Conference talks, webinars, and short courses."
   },
   {
-    number: "03",
     title: "Code",
     href: "/code",
-    body: "Project repositories and replication materials."
+    body: "Repositories and replication materials."
   },
   {
-    number: "04",
     title: "CV",
     href: "/cv",
-    body: "Current CV and professional background."
+    body: "Current CV and background."
   },
   {
-    number: "05",
     title: "Contact",
     href: "/contact",
-    body: "Email, profiles, and collaboration inquiries."
+    body: "Email and collaboration inquiries."
   }
+];
+
+const focusItems = [
+  "Survey methodology",
+  "Legislative text",
+  "State capacity",
+  "Deliberation",
+  "Public opinion",
+  "AI and response quality"
 ];
 
 const externalProfiles = site.links.filter((link) =>
@@ -69,14 +73,11 @@ const externalProfiles = site.links.filter((link) =>
         <div class="eyebrow">Overview</div>
         <h2 id="directory-heading">Work and resources</h2>
       </div>
-      <p>
-        Publications, talks, code, CV, and contact details are grouped below.
-      </p>
+      <p>Start with the papers. Everything else is here for context.</p>
     </div>
     <div class="directory-grid">
-      {directoryItems.map((item) => (
+      {resourceLinks.map((item) => (
         <a class="directory-card" href={item.href}>
-          <span class="directory-number">{item.number}</span>
           <span class="directory-title">{item.title}</span>
           <span>{item.body}</span>
         </a>
@@ -86,12 +87,15 @@ const externalProfiles = site.links.filter((link) =>
 
   <section class="section-grid">
     <div class="panel span-8">
-      <h2>About the Work</h2>
-      <p class="lede">{site.summary}</p>
-      {site.bio.map((paragraph) => <p>{paragraph}</p>)}
+      <div class="eyebrow">Focus</div>
+      <h2>Methods for social and political evidence</h2>
+      <div class="tag-list">
+        {focusItems.map((item) => <span class="tag">{item}</span>)}
+      </div>
     </div>
     <div class="panel span-4">
-      <h2>External Profiles</h2>
+      <div class="eyebrow">Elsewhere</div>
+      <h2>Profiles</h2>
       <div class="list">
         {externalProfiles.map((link) => (
           <a href={link.href}>{link.label}</a>

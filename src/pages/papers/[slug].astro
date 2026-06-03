@@ -88,6 +88,35 @@ const citationMeta = [
   },
   { name: "citation_technical_report_number", content: scholarMetadata.citationTechnicalReportNumber }
 ];
+
+const paperFacts = [
+  { label: "Status", value: status },
+  { label: "Year", value: year },
+  {
+    label: "Version",
+    value: citationPublicationDate && citationPublicationDate !== year ? citationPublicationDate : undefined
+  },
+  { label: "Venue", value: venue },
+  { label: "DOI", value: doi },
+  { label: "PDF Title", value: citationTitle !== title ? citationTitle : undefined }
+].filter((fact) => Boolean(fact.value));
+
+const actionLinks = [
+  pdfPath ? { label: "Download PDF", href: pdfPath, primary: true } : undefined,
+  externalHref ? { label: doi ? "DOI / record" : "Canonical record", href: externalHref } : undefined,
+  { label: "Metadata", href: metadataPath },
+  { label: "Summary", href: summaryPath },
+  { label: "All publications", href: "/publications/" }
+].filter(Boolean);
+
+const fileLinks = [
+  { label: "Landing page", href: pagePath, text: pageUrl },
+  pdfUrl ? { label: "PDF", href: pdfPath, text: pdfUrl } : { label: "PDF", text: "Not posted" },
+  doi ? { label: "DOI", href: `https://doi.org/${doi}`, text: doi } : undefined,
+  externalHref ? { label: "Canonical record", href: externalHref, text: externalHref } : undefined,
+  { label: "Metadata JSON", href: metadataPath, text: metadataUrl },
+  { label: "Summary", href: summaryPath, text: summaryUrl }
+].filter(Boolean);
 ---
 
 <BaseLayout
@@ -97,71 +126,47 @@ const citationMeta = [
   canonicalUrl={pageUrl}
   headMeta={citationMeta}
 >
-  <article class="panel paper-detail">
-    <div class="eyebrow">Paper</div>
-    <h1>{title}</h1>
-    <p class="lede">{displayAuthors}</p>
-    <dl class="paper-facts">
-      <div>
-        <dt>Status</dt>
-        <dd>{status}</dd>
+  <article class="paper-page">
+    <header class="panel paper-hero">
+      <div class="eyebrow">{status}</div>
+      <h1>{title}</h1>
+      <p class="paper-authors">{displayAuthors}</p>
+      <div class="paper-actions">
+        {actionLinks.map((link) => (
+          <a class={link.primary ? "button primary" : "button"} href={link.href}>{link.label}</a>
+        ))}
       </div>
-      {year && (
-        <div>
-          <dt>Year</dt>
-          <dd>{year}</dd>
-        </div>
-      )}
-      {citationPublicationDate && citationPublicationDate !== year && (
-        <div>
-          <dt>Version Date</dt>
-          <dd>{citationPublicationDate}</dd>
-        </div>
-      )}
-      {citationTitle !== title && (
-        <div>
-          <dt>PDF Title</dt>
-          <dd>{citationTitle}</dd>
-        </div>
-      )}
-      {venue && (
-        <div>
-          <dt>Venue</dt>
-          <dd>{venue}</dd>
-        </div>
-      )}
-      {doi && (
-        <div>
-          <dt>DOI</dt>
-          <dd>{doi}</dd>
-        </div>
-      )}
-    </dl>
+    </header>
 
-    <div class="pub-meta paper-actions">
-      {pdfPath && <a class="pub-link" href={pdfPath}>Download PDF</a>}
-      {externalHref && <a class="pub-link" href={externalHref}>Canonical record</a>}
-      <a class="pub-link" href={metadataPath}>Machine-readable metadata</a>
-      <a class="pub-link" href={summaryPath}>Summary file</a>
-      <a class="pub-link" href="/publications/">All publications</a>
-    </div>
-
-    <section class="paper-section">
+    <section class="panel paper-main">
       <h2>{scholarMetadata.fullAbstract || item.fullAbstract ? "Abstract" : "Summary"}</h2>
       {abstract ? <p>{abstract}</p> : <p>No abstract or summary is posted yet.</p>}
     </section>
 
-    <section class="paper-section">
-      <h2>Citation and Files</h2>
-      <ul class="paper-links">
-        <li>Landing page: <a href={pagePath}>{pageUrl}</a></li>
-        {pdfUrl && <li>PDF: <a href={pdfPath}>{pdfUrl}</a></li>}
-        {!pdfUrl && <li>PDF: not posted</li>}
-        {doi && <li>DOI: <a href={`https://doi.org/${doi}`}>{doi}</a></li>}
-        {externalHref && <li>Canonical record: <a href={externalHref}>{externalHref}</a></li>}
-        <li>Metadata JSON: <a href={metadataPath}>{metadataUrl}</a></li>
-        <li>Summary: <a href={summaryPath}>{summaryUrl}</a></li>
-      </ul>
+    <section class="section-grid paper-grid">
+      <aside class="panel span-4">
+        <h2>Details</h2>
+        <dl class="paper-facts">
+          {paperFacts.map((fact) => (
+            <div>
+              <dt>{fact.label}</dt>
+              <dd>{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </aside>
+
+      <aside class="panel span-8">
+        <h2>Files and Links</h2>
+        <dl class="file-links">
+          {fileLinks.map((link) => (
+            <div>
+              <dt>{link.label}</dt>
+              <dd>{link.href ? <a href={link.href}>{link.text}</a> : link.text}</dd>
+            </div>
+          ))}
+        </dl>
+      </aside>
     </section>
   </article>
 </BaseLayout>
