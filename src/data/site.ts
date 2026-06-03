@@ -36,12 +36,12 @@ export const site = {
   socialImageAlt: "Joshua Y. Lerner name and research focus preview card",
   hero: "Research methodologist studying measurement, inference, text, and institutions.",
   intro:
-    "Most of my work starts from an uncomfortable measurement problem: a survey answer that needs interpretation, a law that delegates power in a hard-to-code way, an institution whose capacity is partly hidden, or a policy effect that has to be recovered from imperfect administrative data.",
+    "I tend to start where the data are least cooperative: an open-ended answer that refuses easy coding, a bill section that hides delegation in boilerplate, an institution whose capacity is visible only after it fails, or a policy effect buried in administrative records.",
   summary:
-    "I am interested in what researchers can responsibly learn when the evidence is messy but the question is still worth asking.",
+    "The work is methodological, but the test is substantive: does the measure let us learn something we could defend to a skeptical reader?",
   bio: [
     "At NORC, that often means survey methods: open-ended response coding, response-quality assessment, questionnaire design, synthetic respondents, and the practical question of when AI systems are useful enough to trust. In political science, it has meant Congress, delegation, state capacity, deliberation, and public opinion.",
-    "I like methods that earn their keep. A model is useful only if it improves the measurement problem, clarifies the design, or makes the limits of the evidence easier to see.",
+    "I like methods that earn their place. A model is useful only if it improves the measurement problem, clarifies the design, or makes the limits of the evidence harder to ignore.",
     "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology. I received my PhD in Political Science from Duke University and previously held positions at Duke and Northwestern University Pritzker School of Law."
   ],
   links: [
