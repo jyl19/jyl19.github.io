@@ -3,7 +3,6 @@ import { getPaperPdfPath, getPaperSlug, paperCorpusBasePath, paperItems } from "
 
 const pageRoutes = [
   "/",
-  "/research",
   "/publications",
   "/code",
   "/talks",

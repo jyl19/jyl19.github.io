@@ -47,7 +47,6 @@ export const site = {
   ],
   links: [
     { label: "Publications", href: "/publications" },
-    { label: "Research", href: "/research" },
     { label: "Code", href: "/code" },
     { label: "Talks & Teaching", href: "/talks" },
     { label: "CV", href: "/cv" },

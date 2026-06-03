@@ -5,36 +5,30 @@ import { site } from "../data/site";
 const directoryItems = [
   {
     number: "01",
-    title: "Research",
-    href: "/research",
-    body: "The questions and methods that connect the work."
-  },
-  {
-    number: "02",
     title: "Publications",
     href: "/publications",
     body: "Published articles, working papers, PDFs, abstracts, and metadata."
   },
   {
-    number: "03",
+    number: "02",
     title: "Talks and Teaching",
     href: "/talks",
     body: "Conference presentations, webinars, short courses, and teaching."
   },
   {
-    number: "04",
+    number: "03",
     title: "Code",
     href: "/code",
     body: "Project repositories and replication materials."
   },
   {
-    number: "05",
+    number: "04",
     title: "CV",
     href: "/cv",
     body: "Current CV and professional background."
   },
   {
-    number: "06",
+    number: "05",
     title: "Contact",
     href: "/contact",
     body: "Email, profiles, and collaboration inquiries."
@@ -55,8 +49,8 @@ const externalProfiles = site.links.filter((link) =>
       <p>{site.intro}</p>
       <div class="cta-row">
         <a class="button primary" href="/publications">Publications</a>
-        <a class="button" href="/research">Research</a>
         <a class="button" href="/cv">CV</a>
+        <a class="button" href="/contact">Contact</a>
       </div>
     </div>
     <figure class="hero-portrait">
@@ -76,7 +70,7 @@ const externalProfiles = site.links.filter((link) =>
         <h2 id="directory-heading">Work and resources</h2>
       </div>
       <p>
-        Research themes, publications, talks, code, CV, and contact details are grouped below.
+        Publications, talks, code, CV, and contact details are grouped below.
       </p>
     </div>
     <div class="directory-grid">
