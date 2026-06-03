@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { talks } from "../data/professional";
-import { publications } from "../data/publications";
+import { getPaperSlug, paperCorpusBasePath, publications } from "../data/publications";
 import { site } from "../data/site";
 
 const featured = publications
@@ -10,9 +10,15 @@ const featured = publications
   .slice(0, 5);
 
 const featuredTalks = talks
-  .filter((talk) => talk.featured)
-  .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+  .sort(
+    (a, b) =>
+      b.year - a.year ||
+      Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
+      a.title.localeCompare(b.title)
+  )
   .slice(0, 4);
+
+const getPaperPath = (item) => `${paperCorpusBasePath}/${getPaperSlug(item)}/`;
 ---
 
 <BaseLayout title={`${site.name} | ${site.title}`} description={site.hero}>
@@ -44,6 +50,26 @@ const featuredTalks = talks
   </section>
 
   <section class="section-grid">
+    <div class="panel span-12">
+      <h2>Signature Projects</h2>
+      <p>
+        These are the projects I would point someone to first, because they show the kind of
+        measurement work I mean in practice.
+      </p>
+      <div class="section-grid">
+        {site.signatureProjects.map((item) => (
+          <article class="span-6 theme-card">
+            <div>
+              <h3>{item.href ? <a href={item.href}>{item.title}</a> : item.title}</h3>
+              <p>{item.body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-grid">
     <div class="panel span-8">
       <h2>Approach</h2>
       <p class="lede">{site.summary}</p>
@@ -61,42 +87,13 @@ const featuredTalks = talks
 
   <section class="section-grid">
     <div class="panel span-8">
-      <h2>Research Areas</h2>
-      <p>
-        These research areas are connected by a common concern: how to measure difficult concepts
-        well and make stronger empirical claims in settings shaped by text, institutions,
-        behavior, and incomplete data.
-      </p>
-      <div class="section-grid">
-        {site.themes.map((theme) => (
-          <article class="span-6">
-            <h3>{theme.title}</h3>
-            <p>{theme.body}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-
-    <div class="panel span-4">
-      <h2>Signature Projects</h2>
-      <div class="compact-list">
-        {site.signatureProjects.map((item) => (
-          <div class="compact-item">
-            <div class="mini-title"><strong>{item.title}</strong></div>
-            <p>{item.body}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section-grid">
-    <div class="panel span-8">
       <h2>Selected Publications</h2>
       <div class="list">
         {featured.map((item) => (
           <article class="pub">
-            <div class="pub-title"><strong>{item.title}</strong></div>
+            <div class="pub-title">
+              <a href={getPaperPath(item)}><strong>{item.title}</strong></a>
+            </div>
             <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
             {item.href && (
               <div class="pub-meta">

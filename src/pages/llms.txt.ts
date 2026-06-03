@@ -12,6 +12,7 @@ import { site } from "../data/site";
 const absoluteUrl = (path: string) => new URL(path, site.url).toString();
 
 const getPaperStatus = (item: PaperItem) => {
+  if (item.displayStatus) return item.displayStatus.toLowerCase();
   if ("section" in item) return "published";
   return item.paperStatus ?? getWorkingPaperStatus(item.status);
 };

@@ -2,30 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { githubProfile, repositories } from "../data/repositories";
 import { site } from "../data/site";
+
+const researchRepositories = repositories.filter((repo) => repo.kind !== "Website source");
+const siteRepositories = repositories.filter((repo) => repo.kind === "Website source");
 ---
 
 <BaseLayout
   title={`Code | ${site.name}`}
-  description="Public code and repository links for Joshua Y. Lerner."
+  description="Selected public code and research-material links for Joshua Y. Lerner."
 >
   <section class="panel">
     <div class="eyebrow">Code</div>
-    <h1>Code and Data</h1>
+    <h1>Selected Code and Research Materials</h1>
     <p class="lede section-intro">
-      Public repositories, research code, and related materials connected to my work on text,
-      institutions, survey methodology, and applied research design.
+      Public repositories and research materials that are useful outside this website.
     </p>
     <p class="section-intro">
-      The main code home is my <a href={githubProfile}>GitHub profile</a>. This page keeps the
-      currently public repositories visible from the site itself.
+      This page is intentionally selective. The fuller code home is my
+      <a href={githubProfile}> GitHub profile</a>; paper-specific replication materials are linked
+      from paper pages when they are public.
     </p>
   </section>
 
   <section class="section-grid">
-    <div class="panel span-12">
-      <h2>Public Repositories</h2>
+    <div class="panel span-8">
+      <h2>Research Code</h2>
       <div class="list">
-        {repositories.map((repo) => (
+        {researchRepositories.map((repo) => (
           <article class="pub">
             <div class="pub-title"><strong>{repo.title}</strong></div>
             <p>{repo.description}</p>
@@ -35,6 +38,19 @@ import { site } from "../data/site";
               <a class="pub-link" href={repo.href}>View repository</a>
             </div>
           </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="panel span-4">
+      <h2>Site Source</h2>
+      <div class="compact-list">
+        {siteRepositories.map((repo) => (
+          <div class="compact-item">
+            <div class="mini-title"><strong>{repo.title}</strong></div>
+            <p>{repo.description}</p>
+            <a class="pub-link" href={repo.href}>View repository</a>
+          </div>
         ))}
       </div>
     </div>

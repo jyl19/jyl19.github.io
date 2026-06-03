@@ -1,66 +1,64 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site";
-import { publicationCategories, publications } from "../data/publications";
 
-const researchSections = publicationCategories.map(([key, label]) => ({
-  key,
-  label,
-  theme: site.themes.find((theme) => theme.key === key),
-  items: publications
-    .filter((item) => item.section === "peerReviewed" && item.category === key)
-    .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
-    .slice(0, 3)
-}));
+const researchThreads = [
+  {
+    id: "measurement",
+    title: "Measurement Before Modeling",
+    body:
+      "A lot of empirical work fails before the model starts, because the measure is doing too much quiet work. I study how to define and validate measures for open-ended survey answers, legislative text, state capacity, public opinion, and other concepts that do not arrive as clean variables."
+  },
+  {
+    id: "text",
+    title: "Text as Institutional Evidence",
+    body:
+      "Text is not just a bag of words in my work. Bill sections, committee hearings, agency language, and country statements are records of institutional behavior. The point of the NLP is to recover something substantively meaningful from those records."
+  },
+  {
+    id: "design",
+    title: "Design Under Real Constraints",
+    body:
+      "Policy and program evaluations rarely get the clean assignment mechanism we would like. I work on designs that make the identifying assumptions visible, especially when treatment timing, administrative records, and implementation quality are part of the problem."
+  },
+  {
+    id: "public-opinion",
+    title: "Public Opinion After Conversation",
+    body:
+      "The deliberation work asks whether structured discussion does more than move survey marginals for a weekend. The stronger test is whether people leave with different knowledge, reasoning, attention, and later political behavior."
+  }
+];
 ---
 
 <BaseLayout
   title={`Research | ${site.name}`}
-  description="Research on survey methodology, causal inference, political institutions, text, and deliberation."
+  description="Research on measurement, text, causal inference, institutions, and public opinion."
 >
   <section class="panel span-12">
     <div class="eyebrow">Research</div>
     <h1>Research</h1>
     <p class="lede section-intro">
-      I work across survey methodology, computational social science, causal inference, and
-      political institutions, but those areas are less separate in practice than they often
-      appear on paper.
+      I work on measurement problems that sit between method and substance. The questions are
+      political and social; the evidence is often textual, administrative, behavioral, or
+      otherwise awkward.
     </p>
     <p class="section-intro">
-      Much of my work is about studying social and institutional questions when the core concepts
-      are hard to observe directly and the data do not arrive in tidy form.
-    </p>
-    <p class="section-intro">
-      That leads me repeatedly to problems of measurement, construct validity, and research
-      design. In some projects the tools are NLP or generative AI. In others, they are
-      design-based or econometric methods for causal inference. In both cases, the goal is the
-      same: better empirical work on questions that matter.
+      That awkwardness is the point. If the construct were obvious and the data were clean, the
+      methods would matter less.
     </p>
     <div class="anchor-row">
-      {researchSections.map((section) => (
-        <a class="anchor-link" href={`#${section.key}`}>{section.label}</a>
+      {researchThreads.map((thread) => (
+        <a class="anchor-link" href={`#${thread.id}`}>{thread.title}</a>
       ))}
     </div>
   </section>
 
   <section class="section-grid">
-    {researchSections.map((section) => (
-      <article class="panel span-6 theme-card" id={section.key}>
+    {researchThreads.map((thread) => (
+      <article class="panel span-6 theme-card" id={thread.id}>
         <div>
-          <h2>{section.label}</h2>
-          <p>{section.theme?.body}</p>
-        </div>
-        <div>
-          <h3>Representative Work</h3>
-          <div class="compact-list">
-            {section.items.map((item) => (
-              <article class="pub">
-                <div class="pub-title"><strong>{item.title}</strong></div>
-                <p>{item.venue}, {item.year}.</p>
-                {item.href && <a class="pub-link" href={item.href}>Read article</a>}
-              </article>
-            ))}
-          </div>
+          <h2>{thread.title}</h2>
+          <p>{thread.body}</p>
         </div>
       </article>
     ))}
@@ -68,31 +66,30 @@ const researchSections = publicationCategories.map(([key, label]) => ({
 
   <section class="section-grid">
     <div class="panel span-8">
-      <h2>How the Work Fits Together</h2>
+      <h2>How I Use Methods</h2>
       <p>
-        A lot of my work lives in the overlap between substantive inquiry and methodological
-        development. Survey projects use NLP and generative AI to improve coding and measurement.
-        Evaluation work relies on careful design to recover credible causal effects under
-        real-world constraints. Institutional work uses text, procedure, and measurement to study
-        how political actors behave.
+        I am not especially interested in using a method because it is fashionable. I am interested
+        in whether it helps answer a question that would otherwise be measured badly, inferred too
+        confidently, or left vague.
       </p>
       <p>
-        The unifying logic is not a commitment to any one method. It is a commitment to
-        disciplined empirical research: clear constructs, appropriate tools, and stronger
-        inference in settings that are noisy, high-dimensional, or institutionally complex.
+        That is why the same site has papers on LLMs and legislative complexity, malpractice claims,
+        state capacity, congressional agenda control, automated deliberation, and survey
+        nonresponse. They look different from the outside. They share a worry about whether the
+        quantity being analyzed is the quantity the argument needs.
       </p>
     </div>
     <div class="panel span-4">
-      <h2>Related Pages</h2>
+      <h2>Where to Go Next</h2>
       <div class="compact-list">
         <div class="compact-item">
-          <p><a href="/publications">Browse the full publications list</a></p>
+          <p><a href="/publications">Read paper summaries and working papers</a></p>
+        </div>
+        <div class="compact-item">
+          <p><a href="/talks">See recent talks and short courses</a></p>
         </div>
         <div class="compact-item">
           <p><a href="/cv">Download the current CV</a></p>
-        </div>
-        <div class="compact-item">
-          <p><a href="/contact">Get in touch</a></p>
         </div>
       </div>
     </div>

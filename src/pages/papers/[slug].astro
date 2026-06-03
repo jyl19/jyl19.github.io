@@ -33,11 +33,14 @@ const pageUrl = new URL(pagePath, site.url).toString();
 
 const title = item.title;
 const status =
-  "status" in item && item.status
+  item.displayStatus ??
+  ("status" in item && item.status
     ? item.status
-    : item.paperStatus === "published" || ("year" in item && item.year)
+    : "section" in item && item.section === "other"
+      ? "Other writing"
+      : item.paperStatus === "published" || ("year" in item && item.year)
       ? "Published article"
-      : "Working paper";
+      : "Working paper");
 const venue = "venue" in item ? item.venue : undefined;
 const year = "year" in item ? item.year : undefined;
 const doi = "doi" in item ? item.doi : undefined;
@@ -62,7 +65,9 @@ const displayAuthors = citationAuthors
 const citationPublicationDate =
   scholarMetadata.citationPublicationDate ?? item.citationPublicationDate ?? year;
 const citationJournalTitle =
-  scholarMetadata.citationJournalTitle ?? item.citationJournalTitle ?? venue;
+  scholarMetadata.citationJournalTitle ??
+  item.citationJournalTitle ??
+  ("section" in item && item.section === "peerReviewed" ? venue : undefined);
 const citationDoi = scholarMetadata.citationDoi ?? doi;
 
 const citationMeta = [

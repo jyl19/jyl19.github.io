@@ -16,6 +16,7 @@ type PaperCorpusFields = {
   pdfPath?: string;
   metadataPath?: string;
   scholarPage?: boolean;
+  displayStatus?: string;
   fullAbstract?: string;
   citationAuthors?: string[];
   citationPublicationDate?: string;
@@ -229,12 +230,14 @@ export const publications: Publication[] = [
   {
     title: "Using Machine Learning and Disambiguated Author Identifiers to Improve Record Linkage for Funding Program Evaluation",
     authors: "with Brandon Sepulvado and Jennifer Hamilton",
-    venue: "Annals of Metrics",
+    venue: "ASIS&T SIG-MET Annuals of Metrics",
     year: 2021,
-    section: "peerReviewed",
+    href: "https://www.asist.org/sig/sigmet/events/",
+    section: "other",
     category: "survey",
+    displayStatus: "Conference paper",
     abstract:
-      "This article examines how machine learning and disambiguated author identifiers can improve record linkage in large-scale funding program evaluation. The goal is to reduce linkage error in publication and administrative data so that evaluation pipelines can recover research outputs and downstream impact more accurately."
+      "This conference paper examines how machine learning and disambiguated author identifiers can improve record linkage in large-scale funding program evaluation. The goal is to reduce linkage error in publication and administrative data so that evaluation pipelines can recover research outputs and downstream impact more accurately."
   },
   {
     title: "Physicians with Multiple Paid Medical Malpractice Claims: Are They Outliers or Just Unlucky?",

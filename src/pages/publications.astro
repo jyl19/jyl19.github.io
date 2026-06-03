@@ -53,7 +53,9 @@ const getPaperHtmlPagePath = (item) => `${paperCorpusBasePath}/${getPaperSlug(it
       {groupedPublications.map((group) => (
         <a class="anchor-link" href={`#${group.key}`}>{group.label}</a>
       ))}
-      {otherPublications.length > 0 && <a class="anchor-link" href="#other-writing">Other Writing</a>}
+      {otherPublications.length > 0 && (
+        <a class="anchor-link" href="#other-writing">Other Writing and Conference Papers</a>
+      )}
       <a class="anchor-link" href="#working-papers">Working Papers</a>
     </div>
   </section>
@@ -89,8 +91,8 @@ const getPaperHtmlPagePath = (item) => `${paperCorpusBasePath}/${getPaperSlug(it
   {otherPublications.length > 0 && (
     <section class="section-grid" id="other-writing">
       <div class="panel span-12">
-        <div class="eyebrow">Essays and Reviews</div>
-        <h2>Other Writing</h2>
+        <div class="eyebrow">Essays, Reviews, and Conference Papers</div>
+        <h2>Other Writing and Conference Papers</h2>
         <div class="list">
           {otherPublications.map((item) => (
             <article class="pub">
@@ -100,7 +102,8 @@ const getPaperHtmlPagePath = (item) => `${paperCorpusBasePath}/${getPaperSlug(it
               <p>{item.authors ? `${item.authors}. ` : ""}{item.venue}, {item.year}.</p>
               {item.abstract && <p>{item.abstract}</p>}
               <div class="pub-meta">
-                {item.href && <a class="pub-link" href={item.href}>Read article</a>}
+                {item.displayStatus && <span class="status">{item.displayStatus}</span>}
+                {item.href && <a class="pub-link" href={item.href}>External record</a>}
                 {getPaperPdfPath(item) && (
                   <a class="pub-link" href={getPaperPdfPath(item)}>PDF</a>
                 )}

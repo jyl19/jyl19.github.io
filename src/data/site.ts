@@ -5,25 +5,25 @@ const themes: { key: PublicationCategory; title: string; body: string }[] = [
     key: "survey",
     title: "Survey Research, NLP, and Generative AI",
     body:
-      "I study how NLP and generative AI can improve measurement in surveys, including open-ended response coding, response-quality assessment, fraud detection, questionnaire design, and related validity problems."
+      "I use NLP and generative AI when they help solve survey-measurement problems that are otherwise expensive, slow, or hard to validate."
   },
   {
     key: "evaluation",
     title: "Causal Inference and Program Evaluation",
     body:
-      "I use design-based and econometric methods to evaluate policies and programs in real-world settings, with attention to treatment timing, imperfect implementation, and the inferential limits of administrative and observational data."
+      "I work on designs for real policy settings where treatment timing, implementation, and administrative data rarely behave as cleanly as the textbook case."
   },
   {
     key: "institutions",
     title: "Political Institutions and Legislative Text",
     body:
-      "My work on political institutions focuses especially on Congress, legislative text, delegation, procedure, ideology, and how institutional behavior can be measured from text and other difficult-to-observe signals."
+      "I study Congress and other institutions by treating text, procedure, and agenda control as evidence about behavior rather than as background detail."
   },
   {
     key: "deliberation",
     title: "Public Opinion and Deliberation",
     body:
-      "I study deliberation, political discussion, and public opinion, including whether structured discussion can change what citizens know, how they reason, and how they participate."
+      "I study whether structured discussion changes what people know, how they reason, and how political participation carries forward after the conversation ends."
   }
 ];
 
@@ -34,14 +34,14 @@ export const site = {
   url: "https://jyl19.github.io",
   socialImage: "/images/social-card.png",
   socialImageAlt: "Joshua Y. Lerner name and research focus preview card",
-  hero: "Research methodologist working on measurement, inference, text, and institutions.",
+  hero: "Research methodologist studying measurement, inference, text, and institutions.",
   intro:
-    "I work across survey methodology, political science, NLP and generative AI, and causal inference. The common problem is measurement: how to study complex social and political phenomena with data that are textual, administrative, incomplete, or behaviorally messy.",
+    "Most of my work starts from an uncomfortable measurement problem: a survey answer that needs interpretation, a law that delegates power in a hard-to-code way, an institution whose capacity is partly hidden, or a policy effect that has to be recovered from imperfect administrative data.",
   summary:
-    "My work links computational tools with research design. I build and evaluate measures for survey responses, legislative text, public opinion, and policy programs, with attention to construct validity and credible inference.",
+    "I am interested in what researchers can responsibly learn when the evidence is messy but the question is still worth asking.",
   bio: [
-    "Methodological projects use NLP and generative AI to code open-ended survey responses, assess response quality, classify legislative text, and summarize complex records. Applied projects use design-based and econometric approaches to evaluate policies and programs when implementation, timing, and data quality are imperfect.",
-    "The throughline is disciplined empirical work: clear constructs, appropriate models, and claims that stay connected to institutional context and the limits of the data.",
+    "At NORC, that often means survey methods: open-ended response coding, response-quality assessment, questionnaire design, synthetic respondents, and the practical question of when AI systems are useful enough to trust. In political science, it has meant Congress, delegation, state capacity, deliberation, and public opinion.",
+    "I like methods that earn their keep. A model is useful only if it improves the measurement problem, clarifies the design, or makes the limits of the evidence easier to see.",
     "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology. I received my PhD in Political Science from Duke University and previously held positions at Duke and Northwestern University Pritzker School of Law."
   ],
   links: [
@@ -59,24 +59,28 @@ export const site = {
   themes,
   signatureProjects: [
     {
-      title: "AI and measurement in survey research",
+      title: "Synthetic respondents and survey measurement",
+      href: "/papers/evaluating-the-human-likeness-of-llm-generated-open-ended-responses/",
       body:
-        "Using NLP and generative AI to improve open-ended coding, response-quality assessment, questionnaire evaluation, and related validity checks."
+        "Work with NORC colleagues on when LLM-generated open-ended survey answers look human, where they fail, and how probability-based panels should anchor the comparison."
     },
     {
-      title: "Deliberation, public opinion, and political behavior",
+      title: "America in One Room and scalable deliberation",
+      href: "/papers/can-deliberation-have-lasting-effects-reflections-on-america-in-one-room/",
       body:
-        "Studying whether structured discussion, including AI-assisted deliberation, changes what citizens know, how they reason, and how they participate."
+        "Papers with James Fishkin, Alice Siu, Valentin Bolotnyy, Norman Bradburn, and others on whether structured discussion changes knowledge, voting, and political attention."
     },
     {
-      title: "Legislative text and political institutions",
+      title: "Delegation in congressional bill text",
+      href: "/papers/the-language-of-delegation-an-nlp-analysis-of-congressional-bill-text/",
       body:
-        "Using text analysis and measurement models to study delegation, complexity, procedure, and institutional behavior in Congress."
+        "Active-learning classifiers for identifying delegating language across bill sections, built to study how ideology, party, and agency characteristics shape lawmaking."
     },
     {
-      title: "Applied causal inference for policy evaluation",
+      title: "State capacity and policy response",
+      href: "/papers/state-capacity-and-covid-19-responses-comparing-the-u-s-states/",
       body:
-        "Designing evaluations of policies and programs where treatment timing, implementation, and administrative data are imperfect."
+        "A subnational state-capacity measure used to study COVID-19 response, vaccine rollout, and the conditions under which policy tools actually work."
     }
   ],
 };
