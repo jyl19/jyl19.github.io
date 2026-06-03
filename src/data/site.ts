@@ -34,14 +34,14 @@ export const site = {
   url: "https://jyl19.github.io",
   socialImage: "/images/social-card.png",
   socialImageAlt: "Joshua Y. Lerner name and research focus preview card",
-  hero: "Research methodologist studying measurement, inference, text, and institutions.",
+  hero: "Research methodologist studying how surveys, texts, and institutions become evidence.",
   intro:
-    "I tend to start where the data are least cooperative: an open-ended answer that refuses easy coding, a bill section that hides delegation in boilerplate, an institution whose capacity is visible only after it fails, or a policy effect buried in administrative records.",
+    "I work where the raw material is interpretable before it is analyzable: open-ended survey answers, legislative text, administrative records, deliberative discussion, and institutional performance.",
   summary:
-    "The work is methodological, but the test is substantive: does the measure let us learn something we could defend to a skeptical reader?",
+    "Start with a few flagship projects, then use the publications, talks, code, and CV for the full record.",
   bio: [
-    "At NORC, that often means survey methods: open-ended response coding, response-quality assessment, questionnaire design, synthetic respondents, and the practical question of when AI systems are useful enough to trust. In political science, it has meant Congress, delegation, state capacity, deliberation, and public opinion.",
-    "I like methods that earn their place. A model is useful only if it improves the measurement problem, clarifies the design, or makes the limits of the evidence harder to ignore.",
+    "Across these projects I care about the step between a substantive concept and the variable that stands in for it. That step is where much of the argument happens.",
+    "At NORC, the work often centers on survey methods: open-ended response coding, response-quality assessment, questionnaire design, synthetic respondents, and when AI systems are useful enough to trust. In political science, it has centered on Congress, delegation, state capacity, deliberation, and public opinion.",
     "My peer-reviewed work appears in journals including American Political Science Review, Journal of Politics, Perspectives on Politics, Legislative Studies Quarterly, Public Choice, Review of International Political Economy, JAMA Health Forum, and Journal of Survey Statistics and Methodology. I received my PhD in Political Science from Duke University and previously held positions at Duke and Northwestern University Pritzker School of Law."
   ],
   links: [
