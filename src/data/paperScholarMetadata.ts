@@ -261,7 +261,14 @@ export const paperScholarMetadata: Record<string, PaperScholarMetadata> = {
     citationIssue: "4",
     citationFirstPage: "1449",
     citationLastPage: "1453",
-    citationDoi: "10.1086/692736"
+    citationDoi: "10.1086/692736",
+    fullAbstract: text([
+      "Party leaders face a significant trade-off financing races when the party is out of power: while they care about gaining control of the House, they do not know how willing a potential representative will be to work with and for the party once elected.",
+      "Leadership political action committee (LPAC) contributions are a major mechanism of leadership control over the financing of congressional campaigns, with the hope of influencing the future behavior of candidates.",
+      "We study differences between contributions of the LPACs for leaders of both parties conditional on majority status.",
+      "We find that both majority and minority party leaders prioritize winning elections and ideological homogeneity in their donations, but that these trends are largely contingent on overall electoral conditions.",
+      "In their contributions, majority party leaders pay more attention to ideological cohesion than minority party leaders, while minority party leaders are more interested in gaining seats in the House than majority party leaders."
+    ])
   },
   "setting-the-committee-agenda-measuring-speaker-influence-in-congressional-hearings": {
     citationAuthors: ["Lerner, Joshua Y.", "Shaffer, Robert"],

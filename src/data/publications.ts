@@ -272,7 +272,7 @@ export const publications: Publication[] = [
     section: "peerReviewed",
     category: "institutions",
     abstract:
-      "House party leaders use leadership PAC donations to balance electoral strategy against ideological cohesion. Leaders in both parties reward candidates who help with winning seats and maintaining party unity, but majority leaders place relatively more emphasis on ideological homogeneity while minority leaders focus more heavily on seat gains and competitive races. Majority status therefore changes the strategic logic of intraparty giving rather than eliminating the trade-off."
+      "Party leaders face a significant trade-off financing races when the party is out of power: while they care about gaining control of the House, they do not know how willing a potential representative will be to work with and for the party once elected. Leadership political action committee (LPAC) contributions are a major mechanism of leadership control over the financing of congressional campaigns, with the hope of influencing the future behavior of candidates. We study differences between contributions of the LPACs for leaders of both parties conditional on majority status. We find that both majority and minority party leaders prioritize winning elections and ideological homogeneity in their donations, but that these trends are largely contingent on overall electoral conditions. In their contributions, majority party leaders pay more attention to ideological cohesion than minority party leaders, while minority party leaders are more interested in gaining seats in the House than majority party leaders."
   },
   {
     title: "The Political Science of James Q. Wilson",
