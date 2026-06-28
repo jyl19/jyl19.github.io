@@ -1,0 +1,18 @@
+{
+  "slug": "detecting-llm-generated-answers-to-open-ended-survey-questions-a-survey-specific-data-quality-review-tool",
+  "title": "Detecting LLM-Generated Answers to Open-Ended Survey Questions: A Survey-Specific Data-Quality Review Tool",
+  "authors": "with Brandon Sepulvado, Lilian Huang, and Ting Yan",
+  "venue": null,
+  "year": 2026,
+  "category": "survey",
+  "section": "workingPapers",
+  "status": "under-review",
+  "status_label": "Submitted to Public Opinion Quarterly",
+  "visibility": "metadata-only",
+  "doi": null,
+  "canonical_url": null,
+  "summary": "Develops and validates a survey-specific detector for AI-like open-ended responses as one signal in layered data-quality review, not as a standalone fraud determination.",
+  "metadata_url": "https://jyl19.github.io/papers/detecting-llm-generated-answers-to-open-ended-survey-questions-a-survey-specific-data-quality-review-tool/metadata.json",
+  "summary_url": "https://jyl19.github.io/papers/detecting-llm-generated-answers-to-open-ended-survey-questions-a-survey-specific-data-quality-review-tool/summary.md",
+  "pdf_url": null
+}

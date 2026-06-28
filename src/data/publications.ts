@@ -21,6 +21,8 @@ type PaperCorpusFields = {
   citationAuthors?: string[];
   citationPublicationDate?: string;
   citationJournalTitle?: string;
+  citationConferenceTitle?: string;
+  citationOnlineDate?: string;
   citationVolume?: string;
   citationIssue?: string;
   citationFirstPage?: string;
@@ -240,6 +242,21 @@ export const publications: Publication[] = [
       "This conference paper examines how machine learning and disambiguated author identifiers can improve record linkage in large-scale funding program evaluation. The goal is to reduce linkage error in publication and administrative data so that evaluation pipelines can recover research outputs and downstream impact more accurately."
   },
   {
+    title: "Position: Evaluating Bias in AI Agents Is (Still) a Social Science Measurement Challenge",
+    authors: "with Soubhik Barari and Diwas Bhattarai",
+    venue: "ACL 2026 Workshop on Evaluating AI in Practice",
+    year: 2026,
+    href: "https://openreview.net/forum?id=gYaR4LxoBa",
+    section: "other",
+    category: "survey",
+    displayStatus: "Forthcoming",
+    citationAuthors: ["Barari, Soubhik", "Bhattarai, Diwas", "Lerner, Joshua Y."],
+    citationPublicationDate: "2026",
+    citationConferenceTitle: "ACL 2026 Workshop on Evaluating AI in Practice",
+    abstract:
+      "This position paper argues that evaluating bias in AI agents remains a social-science measurement problem. It distinguishes dimensions of bias, separates observed bias from its causes, and highlights delegation as a source of bias in agentic systems."
+  },
+  {
     title: "Physicians with Multiple Paid Medical Malpractice Claims: Are They Outliers or Just Unlucky?",
     authors: "with Bernard Black and David Hyman",
     venue: "International Review of Law and Economics",
@@ -296,6 +313,22 @@ export const publications: Publication[] = [
 ];
 
 export const workingPapers: WorkingPaper[] = [
+  {
+    title: "What Happens When We Prompt the Model, Not the People? Evaluating LLMs as Survey Estimators",
+    authors: "with Trent D. Buskirk",
+    status: "Submitted to Public Opinion Quarterly",
+    category: "survey",
+    note:
+      "Evaluates direct LLM-based estimates of population quantities against Survey of Consumer Finances benchmarks, emphasizing substitution risk and the need for target-specific validation."
+  },
+  {
+    title: "Detecting LLM-Generated Answers to Open-Ended Survey Questions: A Survey-Specific Data-Quality Review Tool",
+    authors: "with Brandon Sepulvado, Lilian Huang, and Ting Yan",
+    status: "Submitted to Public Opinion Quarterly",
+    category: "survey",
+    note:
+      "Develops and validates a survey-specific detector for AI-like open-ended responses as one signal in layered data-quality review, not as a standalone fraud determination."
+  },
   {
     title: "Setting the Committee Agenda: Measuring Speaker Influence in Congressional Hearings",
     authors: "with Robert Shaffer",

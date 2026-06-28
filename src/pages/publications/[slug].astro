@@ -69,15 +69,21 @@ const citationJournalTitle =
   scholarMetadata.citationJournalTitle ??
   item.citationJournalTitle ??
   ("section" in item && item.section === "peerReviewed" ? venue : undefined);
+const citationConferenceTitle =
+  scholarMetadata.citationConferenceTitle ??
+  item.citationConferenceTitle ??
+  ("section" in item && item.section === "other" ? venue : undefined);
 const citationDoi = scholarMetadata.citationDoi ?? doi;
 
 const citationMeta = [
   { name: "citation_title", content: citationTitle },
   ...citationAuthors.map((author) => ({ name: "citation_author", content: author })),
   { name: "citation_publication_date", content: citationPublicationDate },
+  { name: "citation_online_date", content: scholarMetadata.citationOnlineDate ?? item.citationOnlineDate },
   { name: "citation_pdf_url", content: pdfUrl },
   { name: "citation_abstract", content: abstract },
   { name: "citation_journal_title", content: citationJournalTitle },
+  { name: "citation_conference_title", content: citationConferenceTitle },
   { name: "citation_volume", content: scholarMetadata.citationVolume ?? item.citationVolume },
   { name: "citation_issue", content: scholarMetadata.citationIssue ?? item.citationIssue },
   { name: "citation_firstpage", content: scholarMetadata.citationFirstPage ?? item.citationFirstPage },

@@ -1,0 +1,18 @@
+{
+  "slug": "what-happens-when-we-prompt-the-model-not-the-people-evaluating-llms-as-survey-estimators",
+  "title": "What Happens When We Prompt the Model, Not the People? Evaluating LLMs as Survey Estimators",
+  "authors": "with Trent D. Buskirk",
+  "venue": null,
+  "year": 2026,
+  "category": "survey",
+  "section": "workingPapers",
+  "status": "under-review",
+  "status_label": "Submitted to Public Opinion Quarterly",
+  "visibility": "metadata-only",
+  "doi": null,
+  "canonical_url": null,
+  "summary": "Evaluates direct LLM-based estimates of population quantities against Survey of Consumer Finances benchmarks, emphasizing substitution risk and the need for target-specific validation.",
+  "metadata_url": "https://jyl19.github.io/papers/what-happens-when-we-prompt-the-model-not-the-people-evaluating-llms-as-survey-estimators/metadata.json",
+  "summary_url": "https://jyl19.github.io/papers/what-happens-when-we-prompt-the-model-not-the-people-evaluating-llms-as-survey-estimators/summary.md",
+  "pdf_url": null
+}

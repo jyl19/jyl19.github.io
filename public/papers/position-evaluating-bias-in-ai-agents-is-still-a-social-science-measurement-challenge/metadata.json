@@ -1,0 +1,25 @@
+{
+  "slug": "position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge",
+  "title": "Position: Evaluating Bias in AI Agents Is (Still) a Social Science Measurement Challenge",
+  "authors": "with Soubhik Barari and Diwas Bhattarai",
+  "venue": "ACL 2026 Workshop on Evaluating AI in Practice",
+  "year": 2026,
+  "category": "survey",
+  "section": "other",
+  "status": "forthcoming",
+  "status_label": "Forthcoming, ACL 2026 Workshop on Evaluating AI in Practice",
+  "visibility": "metadata-only",
+  "doi": null,
+  "canonical_url": "https://openreview.net/forum?id=gYaR4LxoBa",
+  "citation_authors": [
+    "Barari, Soubhik",
+    "Bhattarai, Diwas",
+    "Lerner, Joshua Y."
+  ],
+  "citation_publication_date": "2026",
+  "citation_conference_title": "ACL 2026 Workshop on Evaluating AI in Practice",
+  "summary": "Argues that bias evaluation for AI agents remains a social-science measurement problem, requiring clear constructs, valid operationalization, and attention to delegation as a source of bias.",
+  "metadata_url": "https://jyl19.github.io/papers/position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge/metadata.json",
+  "summary_url": "https://jyl19.github.io/papers/position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge/summary.md",
+  "pdf_url": null
+}

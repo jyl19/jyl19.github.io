@@ -3,6 +3,8 @@ export type PaperScholarMetadata = {
   citationAuthors?: string[];
   citationPublicationDate?: string;
   citationJournalTitle?: string;
+  citationConferenceTitle?: string;
+  citationOnlineDate?: string;
   citationVolume?: string;
   citationIssue?: string;
   citationFirstPage?: string;
