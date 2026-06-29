@@ -27,6 +27,8 @@ export const publicPaperPdfs: Record<string, string> = {
     "/papers/measuring-state-capacity-in-the-u-s-states/paper.pdf",
   "parties-and-agenda-setting-a-final-passage-approach-to-ideal-point-estimation":
     "/papers/parties-and-agenda-setting-a-final-passage-approach-to-ideal-point-estimation/paper.pdf",
+  "position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge":
+    "/papers/position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge/paper.pdf",
   "scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters":
     "/papers/scaling-dialogue-for-democracy-can-automated-deliberation-create-more-deliberative-voters/paper.pdf",
   "spillover-presidential-ads-and-campaign-contributions-in-a-polarized-system":

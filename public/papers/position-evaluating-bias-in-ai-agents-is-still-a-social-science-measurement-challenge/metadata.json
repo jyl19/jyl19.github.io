@@ -8,7 +8,7 @@
   "section": "other",
   "status": "forthcoming",
   "status_label": "Forthcoming, ACL 2026 Workshop on Evaluating AI in Practice",
-  "visibility": "metadata-only",
+  "visibility": "public-pdf",
   "doi": null,
   "canonical_url": "https://openreview.net/forum?id=gYaR4LxoBa",
   "citation_authors": [
@@ -21,5 +21,5 @@
   "summary": "Argues that bias evaluation for AI agents remains a social-science measurement problem, requiring clear constructs, valid operationalization, and attention to delegation as a source of bias.",
   "metadata_url": "https://jyl19.github.io/papers/position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge/metadata.json",
   "summary_url": "https://jyl19.github.io/papers/position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge/summary.md",
-  "pdf_url": null
+  "pdf_url": "https://jyl19.github.io/papers/position-evaluating-bias-in-ai-agents-is-still-a-social-science-measurement-challenge/paper.pdf"
 }
